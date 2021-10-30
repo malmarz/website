@@ -22,9 +22,24 @@ draft: False
 Switch to branch **1-setup** from **malmarz/isom350-blog** github repo to see this step's implementation
 {{% /callout %}}
 
+## First Create A Django Project
+### Using Replit
+
 To setup our blog project, create a replit using **Django Template**. You will initially get a code structure that looks like the following:
 
 {{< figure src="courses/350/project-structure.png" caption="Project Structure" >}}
+
+### Using VS Code
+
+To setup a Django project using VS Code [open the Terminal]({{{< ref "terminal.md" >}}}) then type the following command:
+
+```bash
+> django-admin startproject mysite
+```
+
+Replace mysite with the name you want to give your project. The same directory structure as the one from replit will be created for you to hold your code.
+
+## Then Create An App Directory
 
 We must then create an app directory for our code because in Django, we must create at least a sinlge app in our project to be able to write code. We use the shell commands provided by Django to easily generate the app directory that will hold our code by first openning the shell:
 
