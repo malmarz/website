@@ -15,7 +15,7 @@ date: 2021-03-23
 type: book
 
 # Position of this page in the menu. Remove this option to sort alphabetically.
-weight: 4
+weight: 6
 
 draft: False
 diagram: True

@@ -23,6 +23,7 @@ Slides for this section can be found [here]({{< ref "/slides/350/intro/index.md"
 
 We will cover a number of prerequisites for the course before we dive into web application development. Specifically, we will need to cover the following topics:
 
+0. [Introduction to the development environment]()
 1. [Quick Python review, including Object Oriented]({{< ref "python.md" >}}) Programming and some useful Python features.
 2. [Remote collaboration]({{< ref "collab.md" >}}) on software projects.
 3. [Project management]({{< ref "proj-mgt.md" >}}) for team based projects.

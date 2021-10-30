@@ -44,3 +44,7 @@ If you are using replit.com then you do not need to follow these instructions:
     {{< figure src="courses/350/pyinstall.png" width=70%  >}}
  - [Download and Install VS Code](https://code.visualstudio.com/download)
  - [Download and Install GitHub Desktop](https://desktop.github.com/)
+ - After completing installation of python, install the Django library by openning a terminal window and typing:
+ ```bash
+ > pip install django
+ ```
