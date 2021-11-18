@@ -4,7 +4,7 @@ summary: How to use Django forms to handle data input
 authors: []
 tags: [isom350]
 categories: []
-date: "2021-06-06T12:33:41Z"
+date: "2021-11-18T06:05:03Z"
 draft: false
 slides:
   # Choose a theme from https://github.com/hakimel/reveal.js#theming

@@ -4,7 +4,7 @@ summary: Using Django Temapltes to control web application look and feel
 authors: []
 tags: [isom350]
 categories: []
-date: "2021-05-11T15:02:06Z"
+date: "2021-11-18T05:52:32Z"
 slides:
   # Choose a theme from https://github.com/hakimel/reveal.js#theming
   theme: moon

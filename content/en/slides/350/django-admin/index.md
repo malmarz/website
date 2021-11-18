@@ -4,7 +4,7 @@ summary: Configuring the django Admin for Your Project
 authors: []
 tags: [isom350]
 categories: []
-date: "2021-04-27T14:42:08Z"
+date: "2021-11-18T05:54:55Z"
 slides:
   # Choose a theme from https://github.com/hakimel/reveal.js#theming
   theme: moon

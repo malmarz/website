@@ -4,7 +4,7 @@ summary: How we can traverse relationships in django objects and fetch/present t
 authors: []
 tags: [isom350]
 categories: []
-date: "2021-05-24T05:06:22Z"
+date: "2021-11-18T05:58:28Z"
 draft: false
 slides:
   # Choose a theme from https://github.com/hakimel/reveal.js#theming

@@ -4,7 +4,7 @@ summary: How to improve the url path design of a Django web application and expl
 authors: []
 tags: [isom350]
 categories: []
-date: "2021-05-11T15:05:30Z"
+date: "2021-11-18T05:53:32Z"
 slides:
   # Choose a theme from https://github.com/hakimel/reveal.js#theming
   theme: moon

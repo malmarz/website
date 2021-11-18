@@ -4,7 +4,7 @@ summary: Explore how we can leverage what we have learned so far by taking advan
 authors: []
 tags: [isom350]
 categories: []
-date: "2021-05-12T12:07:04Z"
+date: "2021-11-18T05:55:04Z"
 slides:
   # Choose a theme from https://github.com/hakimel/reveal.js#theming
   theme: moon

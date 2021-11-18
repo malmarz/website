@@ -4,7 +4,7 @@ summary: How to utilize available tools to enable developers to work together
 authors: []
 tags: [isom350]
 categories: []
-date: "2021-04-16T13:12:50Z"
+date: "2021-11-18T06:05:15Z"
 slides:
   # Choose a theme from https://github.com/hakimel/reveal.js#theming
   theme: moon

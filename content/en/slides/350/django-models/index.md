@@ -4,7 +4,7 @@ summary: Defining the models and a Django project
 authors: []
 tags: [isom350]
 categories: []
-date: "2021-04-25T10:00:32Z"
+date: "2021-11-18T05:53:55Z"
 slides:
   # Choose a theme from https://github.com/hakimel/reveal.js#theming
   theme: moon

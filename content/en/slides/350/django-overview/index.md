@@ -4,7 +4,7 @@ summary: Gives a general overview of the main steps in the Django development pr
 authors: []
 tags: [isom350]
 categories: []
-date: "2021-04-24T10:14:50Z"
+date: "2021-11-18T05:51:46Z"
 slides:
   # Choose a theme from https://github.com/hakimel/reveal.js#theming
   theme: moon

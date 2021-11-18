@@ -4,7 +4,7 @@ summary: Explains how Django view functions work and how to use them
 authors: []
 tags: [isom350]
 categories: []
-date: "2021-05-02T20:46:46Z"
+date: "2021-11-18T05:52:00Z"
 slides:
   # Choose a theme from https://github.com/hakimel/reveal.js#theming
   theme: moon
