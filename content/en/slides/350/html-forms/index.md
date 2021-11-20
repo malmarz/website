@@ -164,7 +164,7 @@ def form_view(request):
 Create a calculator view where the user:
 
 - Inputs two values
-- Choses the operation
+- Chooses the operation
 - Gets the result when the form is submitted
 
 ---
