@@ -7,7 +7,7 @@ categories: []
 date: "2021-04-10T13:12:39Z"
 slides:
   # Choose a theme from https://github.com/hakimel/reveal.js#theming
-  theme: moon
+  theme: solarized
   # Choose a code highlighting style (if highlighting enabled in `params.toml`)
   #   Light style: github. Dark style: dracula (default).
   #   Available highlight themes listed in: https://highlightjs.org/static/demo/

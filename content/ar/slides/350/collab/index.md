@@ -7,7 +7,7 @@ categories: []
 date: "2021-04-16T13:12:50Z"
 slides:
   # Choose a theme from https://github.com/hakimel/reveal.js#theming
-  theme: moon
+  theme: solarized
   # Choose a code highlighting style (if highlighting enabled in `params.toml`)
   #   Light style: github. Dark style: dracula (default).
   #   Available highlight themes listed in: https://highlightjs.org/static/demo/
@@ -17,7 +17,7 @@ slides:
   diagram: true
   diagram_options:
     # Mermaid diagram themes include: default,base,dark,neutral,forest
-    theme: dark
+    theme: forest
 
   # RevealJS slide options.
   # Options are named using the snake case equivalent of those in the RevealJS docs.
