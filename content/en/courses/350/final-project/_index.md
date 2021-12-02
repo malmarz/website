@@ -40,7 +40,7 @@ USe this description to build the ER Diagram for your project then start putting
 
 ## Requirements
 
-- [Signup your team](#)
+- [Signup your team](https://classroom.github.com/a/GxWpg7CE)
 - Team must agree on a project manager. Write the name of the team members on the readme file and make clear who the project team leader is.
 - Read the description of the project then perform the following project management and design tasks
   - Determine the information requirements of the project by drawing the ER-Diagram. You can use [draw.io](https://draw.io/) then download the image and post it in the Readme file of the project.
