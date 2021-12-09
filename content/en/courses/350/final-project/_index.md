@@ -18,16 +18,16 @@ draft: False
 ---
 
 {{% callout note %}}
-Demonstrations are due on day before last of our class, Dec 18th during class time
+Demonstrations are due on day before last of our class, Jan 8th during class time
 {{% /callout %}}
 
 
 ## Project Description
 
-You sit down with a respresentative of an online retailing business that are looking to build a new e-commerce platform for their business. In the interview, he gives the following description of what they want in the new platform:
+You sit down with a representative of an online retailing business that are looking to build a new e-commerce platform for their business. In the interview, he gives the following description of what they want in the new platform:
 
 '''
-We require an e-commerce platform to display our products and allow users to search and purchase items. Since we are an online retailer, our products will have different categories. The product will have a description, a serial number, price, and quantity in store. It would also be preferrable to have an image displayed of the product and have simple inventory management as part of the system.
+We require an e-commerce platform to display our products and allow users to search and purchase items. Since we are an online retailer, our products will have different categories. The product will have a description, a serial number, price, and quantity in store. It would also be preferable to have an image displayed of the product and have simple inventory management as part of the system.
 
 The platform should keep track of our customer information. At the minimum, we expect to keep records of our customers' names, addresses, emails, and phone numbers. The platform should also provide some CRM features to help us manage our customers to improve their loyalty. For that, we need to at least keep track of the purchase history of our customers and calculate a profitability score for them.
 
