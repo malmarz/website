@@ -1,5 +1,5 @@
 ---
-title: Collaboration
+title: Collaboration & Project Management
 summary: How to utilize available tools to enable developers to work together
 authors: []
 tags: [isom350]
