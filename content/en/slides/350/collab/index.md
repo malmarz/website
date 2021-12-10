@@ -44,7 +44,75 @@ slides:
 
 Mohammad AlMarzouq
 
-Collaboration in Software Development
+Collaboration and Project Management
+
+---
+
+### Two Aspects to Manage in Your Software Project
+
+1. Collaboration 
+2. Project Management
+
+---
+
+## Collaboration
+
+- About coordinating between developers
+- Ensures their work can be merged/combined into the project successfully
+- Will utilize:
+  - **Branch** and **merge** features from Git
+  - **Pull requests** from GitHub
+- Must agree on workflow
+  
+---
+
+## Collaboration Workflow
+
+1. Developer must always create a **branch** for any new task you work on and **NEVER** work directly on **main** branch
+2. Developer must publish branch then create a **pull request** to merge that branch into the **main** branch when they are done
+3. Project manager examines the pull request then merges the work to **main** branch
+4. The **main** branch must always contain a working and recent copy of the project, so always test it.
+
+---
+
+## Project Management
+
+- Traditionally, it is about completing the project within time and budget
+- We are utilizing an agile project management methodology, so:
+  - It is about utilizing resources efficiently to make progress in the project
+  - There is no **end** in the traditional sense in agile projects and the project is ongoing
+
+---
+## Project Management
+
+- More responsibility on project members to self-organize and pick their tasks
+- GitHub ticket board is utilized for Project Management
+- Project Manager must ensure information on ticket board is correct and up-to-date
+
+---
+
+### Why Use GitHub Project Ticket Board?
+
+- Helps everyone in the team know who is working on what
+- Communicates to everyone in the team what the project tasks are
+- Communicates progress
+- Coordinates work by allowing members to choose to work on tasks no one else is working on
+
+---
+
+## How the Ticketing System Works
+
+- Each ticket represents a task to be completed
+- Tickets representing the requirements of the project are placed in a **To-Do** list
+- Developers assign themselves a ticket to let the other members know what they are working on and move it to **In-Progress** list
+
+---
+
+## How the Ticketing System Works
+
+- Developer then starts the steps described in the collaboration process and creates a new branch to work on the ticket
+- Once done and the pull request is created, the pull request is linked to the ticket and the ticket is moved to the **To-Merge** list
+- Project managers merges all the pull requests and moves their corresponding tickets to the **Done** list to track progress.
 
 ---
 
