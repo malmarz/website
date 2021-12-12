@@ -69,18 +69,32 @@ It is the same for data driven-views, we just use Django models to fetch/store d
 
 ---
 
-## Fetching Data
+## CRUD Views/Operations Can Be On
 
+- List of objects
 - Single object
-- List of Objects
+
 
 ---
 
-## Fetching Single Objects
+### The Read Operation
+
+---
+
+## List Views
+
+- Fetch and display a list of items matching a specific criteria
+- Model.objects.filter, all, values are used to fetch the list of data and set criteria
+- Criteria can be set in url or changed based on url
+
+---
+
+## Single Object Views
 
 - Model.objects.get is used (replace Model with your model)
-- Using primary key or key (unique values)
-- One object or none is returned
+- Must use primary key or key (unique values) to fetch a single object
+- Key typically set in url and named variable named `pk`
+- One object or none is returned and displayed
 
 ---
 
@@ -542,9 +556,9 @@ def list_posts(request):
 
 ---
 
-### Fetching Single Objects
+### Single Object Views
 
-- Just replace filter with get
+- Just replace filter (from list views) with get
 - get must return a single object (not a list) otherwise it will through an Exception
   - For our Post models, the exception classes are:
     - Post.DoesNotExist if object was not found
