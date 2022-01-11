@@ -73,4 +73,4 @@ Here is an example of how the `poll_list.html` template will look like:
 {% endblock %}
 ```
 
-Notice, everything that will show in all views, we put in `base.html`, anything that is specific to the current view, we place inside the content tag in the view template.
+Notice, everything that will show in all views, we put in `base.html`, anything that is specific to the current view, we place inside the content tag in the view template. Keep in mind, that you can have as many blocks as you want in base and can name them as you like. The block is basically a named area in your website that you want django to place HTML content in, just like the named slots in python fstrings, but for templates and to place large blocks of content instead of the content of a single variable.
