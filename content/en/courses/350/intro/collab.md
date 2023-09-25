@@ -164,10 +164,10 @@ There are numerous terms that you need to be aware of to use Git and GitHub effe
 
 ## Collaboration Assignment
 
-1- Start forming teams of 2 students and agree who will be the project manager for the team.
-2- Use the following link on github classroom to form your team and setup the assignment: 
+1. Start forming teams of 2 students and agree who will be the project manager for the team.
+2. Use the following link on github classroom to form your team and setup the assignment: 
    [https://classroom.github.com/a/vOWvfACp](https://classroom.github.com/a/vOWvfACp)
-3- The assignment is team based, each team member must perform the following tasks using the workflow we explained in class:
+3. The assignment is team based, each team member must perform the following tasks using the workflow we explained in class:
    - The project manager must create a README.md. The README.md must include the following:
       - The name of the team members
       - The name of the project manager
