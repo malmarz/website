@@ -58,7 +58,7 @@ In asynchronous collaboration, each member of the collaborating team would work 
 
 Using git, or github will require developers to learn a new tool that might not be easy to learn at first. But once the developers use the tool correctly, it is possible to enable the collaboration of thousands of developers on a single project, as can be seen in the [linux kernal project](https://github.com/torvalds/linux).
 
-Fortunately, replit.com integrates well with github. We will be using the main git features from within replite.com, and for other tasks such as merging  and resolving conflicts, we will use the web interface provided by github.com to perform these collaboration related tasks.
+There are many options for developers to use Git and GitHub, they all perform the same tasks and enable the same workflows. The simplist is to use [GitHub Desktop](https://desktop.github.com/) to perform basic operations. If you setup VSCode correctly you can even get the features in VSCode itself. We will also use the web interface provided by GitHub for tasks such as merging  and resolving conflicts.
 
 Using github is not sufficient for collaborating effectively. To be effective, the following conditions must be met:
 1. Code organized to enable collaboration (Django forces that on the project in the way it organizes the code)
@@ -161,3 +161,22 @@ There are numerous terms that you need to be aware of to use Git and GitHub effe
 - What is a Git branch? How would it be useful when working with a team of developers?
 - When working on a development project, explain what was the workflow that you used as a team to coordinate between each other?
 - What is a pull request? What is a conflict? How would you deal with a conflict in a pull request?
+
+## Collaboration Assignment
+
+1- Start forming teams of 2 students and agree who will be the project manager for the team.
+2- Use the following link on github classroom to form your team and setup the assignment: 
+   [https://classroom.github.com/a/vOWvfACp](https://classroom.github.com/a/vOWvfACp)
+3- The assignment is team based, each team member must perform the following tasks using the workflow we explained in class:
+   - The project manager must create a README.md. The README.md must include the following:
+      - The name of the team members
+      - The name of the project manager
+      - Commit and push changes to master
+   - After repository is created, each team member must create an .md file named after their name. For example, if the team member's name is John Doe, then the file name would be john-doe.md. The file must include the following:
+      - A brief introduction about the team member
+      - A list of the courses the team member has taken so far
+      - A table (it could be of anything)
+      - An image (can be any image from google)
+      - A link to any website
+      - The goal from creating this file is to learn the markdown language and how to use it to create content on GitHub. You can find information on markdown at [https://guides.github.com/features/mastering-markdown/](https://guides.github.com/features/mastering-markdown/)
+   - Each team member must (including the project manager) must modify the README.md file to include a link to their file. For example, if the team member's name is John Doe, then the link would be [John Doe](john-doe.md). Include the link next to your name in the README.md file. Note that you should create a branch and commit your changes to the branch, then send a pull request to the project manager to merge your changes to the master branch.
