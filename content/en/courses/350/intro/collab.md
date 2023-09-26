@@ -103,7 +103,7 @@ graph TD
    - **NEVER work directly on the master branch, only run fetch/pull to update it on your computer**. 
    - **Create a new branch** from the master branch only.
    - **Choose a name** for the new branch that reflects what work is done. For example bug_1234, where the number is the issue number on github. Or feature_1234. To learn about what characters are allowed in a branch name [please read this article](https://git-scm.com/docs/git-check-ref-format).
-   - ** The master branch is the responsiblity of the project manager only**, these include:
+   - **The master branch is the responsiblity of the project manager only**, these include:
       - The Master branch **should always** have a working copy of the project, never a broken one. 
       - Ensuring that the master branch is always up to date with the latest changes from all team members. This way team members can get the latest working code by running fetch/pull on their local copy of the master branch.
       - At the end of completing the work on the newly created branch, the project manager will be responsible for merging the branch into the master branch.
