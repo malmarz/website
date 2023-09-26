@@ -103,9 +103,9 @@ All instructions available on course website.
 
 ## The Introduction
 
-1. [Quick Python review, including Object Oriented]({{< ref "courses/350/intro/python.md" >}}) Programming and some useful Python features.
-2. [Remote collaboration]({{< ref "collab.md" >}}) on software projects.
-3. [Project management]({{< ref "proj-mgt.md" >}}) for team based projects.
-4. [Overview of web applications]({{< ref "webapplications.md" >}}).
-5. [Overview of the Django development process]({{< ref "dev-process.md" >}}).
+1. [Remote collaboration]({{< ref "collab.md" >}}) on software projects.
+2. [Project management]({{< ref "proj-mgt.md" >}}) for team based projects.
+3. [Overview of web applications]({{< ref "webapplications.md" >}}).
+4. [Overview of the Django development process]({{< ref "dev-process.md" >}}).
+5. [Quick Python review, including Object Oriented]({{< ref "courses/350/intro/python.md" >}}) Programming and some useful Python features.
 

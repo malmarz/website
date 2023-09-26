@@ -88,25 +88,31 @@ graph TD
 
 {{% callout note %}}
 {{< icon name="github" pack="fab" >}} for steps performed on GitHub
-{{< icon name="code" pack="fas" >}} for steps preformed on Replit.com
+{{< icon name="desktop" pack="fas" >}} for steps preformed locally on your computer using GitHub Desktop, VSCode, or Git from the command line.
 {{% /callout %}}
 
-1. {{< icon name="github" pack="fab" >}} **Find a task or fix to work on:** It is the responsibility of the project manager to ensure that developers can find tasks to work on. These can be found listed on GitHub issues, the ticketing system used for the project, speaking to the project manager, or reading the requirements document. For this course, project managers should write down tasks as issues in GitHub. Developers can also assist by writing issues that can either bew feature suggestions or descriptions of bugs that need to be fixed. We will discuss project management in more detail in [the next section]({{< ref "proj-mgt.md" >}}).
-2. {{< icon name="code" pack="fas" >}} **Import your project from GitHub** as shown in the figure. It is also fine to import the same project again every time you want to start new work to ensure you get a fresh copy of the code.
-{{< figure src="courses/350/replit-import-repo.png" caption="Import Repository from GitHub" >}}
-   - **IMPORTANT: Pull updates for existing projects:** If you don;t want to import the project again and lose your work on replit, be sure to **pull** updates that were merged to the master branch by the project manager on GitHub. This will guarantee that you start your work with the latest version of the code
-{{< figure src="courses/350/replit-pull-github.png" caption="Fetching Updates from GitHub" >}}
-3. {{< icon name="code" pack="fas" >}} **Create a new branch:** Branches allow a developer to change the code without fear of ruining the project. When starting on a programming task, always create a new git branch for the task from the master branch. A branch allows you to change the code for you only, and not affect the work of others. You need to always remember the following:
-   - **NEVER work directly on the master branch**. 
+0. {{< icon name="desktop" pack="fas" >}} **Pre-requisite:** Clone the project from GitHub to your computer to get the latest copy of the project code on your computer. Select **clone project** on GitHub desktop then search for the project you want to clone under the Github.com tab. You need to do this once to work from your computer. However, you have to periodically run a pull or fetch operation on your computer to get the latest changes that were added to the project on github from other team memebers.
+
+{{< figure src="courses/350/github_clone.png" caption="Cloning a GitHub to your computer" >}}
+
+{{< figure src="courses/350/github_fetch.png" caption="Fetching updates from GitHub to update the master branch" >}}
+
+1. {{< icon name="github" pack="fab" >}} **Find a task or fix to work on:** It is the responsibility of the project manager to ensure that developers can find tasks to work on. These can be found listed on GitHub issues, the ticketing system used for the project, speaking to the project manager, or reading the requirements document. For this course, project managers should coordinate what team members should be working on. I would highly recommend project teams utilize GitHub issues or project management to write down tasks as issues/tickets in GitHub. Developers can also assist by writing issues that can either bew feature suggestions or descriptions of bugs that need to be fixed. We will discuss project management in more detail in [the next section]({{< ref "proj-mgt.md" >}}).
+
+2. {{< icon name="desktop" pack="fas" >}} **Create a new branch:** Branches allow a developer to change the code without fear of ruining the project. When starting on a programming task, always create a new git branch for the task from the master branch. A branch allows you to change the code for you only, and not affect the work of others. You need to always remember the following:
+   - **NEVER work directly on the master branch, only run fetch/pull to update it on your computer**. 
    - **Create a new branch** from the master branch only.
-   - The Master branch **should always** have a working copy of the project, never a broken one.
    - **Choose a name** for the new branch that reflects what work is done. For example bug_1234, where the number is the issue number on github. Or feature_1234. To learn about what characters are allowed in a branch name [please read this article](https://git-scm.com/docs/git-check-ref-format).
+   - ** The master branch is the responsiblity of the project manager only**, these include:
+      - The Master branch **should always** have a working copy of the project, never a broken one. 
+      - Ensuring that the master branch is always up to date with the latest changes from all team members. This way team members can get the latest working code by running fetch/pull on their local copy of the master branch.
+      - At the end of completing the work on the newly created branch, the project manager will be responsible for merging the branch into the master branch.
+   
+{{< figure src="courses/350/github_fetch.png" caption="Switching branches can be done using GetHub Desktop from the top panel." >}}
 
 
-{{< figure src="courses/350/git-replit.png" caption="Creating or Switching Branches on Replit.com" >}}
-
-4. {{< icon name="code" pack="fas" >}} **Working on the task**: Ensure that the task you are working on is small and simple. If there are large and complex tasks, break them down into smaller tasks.
-5. {{< icon name="code" pack="fas" >}} **Commit the task**: Upon completion of the task, or reaching a milestone in your work, you must commit the work. This would allow you to create a snapshot of the work you did to be stored in the github history. The advantage of having a commit snapshot is that you can return to this version of the code any time. Therefore, it is recommended to commit frequently and even for small changes. Just make sure when you commit that you write a useful message for the history to know what you did in that commit. You must always commit and test your work and continue to change the code and commit until you are sure that the changes you did are acceptable and the task is complete.
+4. {{< icon name="desktop" pack="fas" >}} **Working on the task**: Ensure that the task you are working on is small and simple. If there are large and complex tasks, break them down into smaller tasks.
+5. {{< icon name="desktop" pack="fas" >}} **Commit the task**: Upon completion of the task, or reaching a milestone in your work, you must commit the work. This would allow you to create a snapshot of the work you did to be stored in the github history. The advantage of having a commit snapshot is that you can return to this version of the code any time. Therefore, it is recommended to commit frequently and even for small changes. Just make sure when you commit that you write a useful message for the history to know what you did in that commit. You must always commit and test your work and continue to change the code and commit until you are sure that the changes you did are acceptable and the task is complete.
    {{< figure src="courses/350/replit-commit.png" caption="Commit Your Work to Store It on GitHub" >}}
 6. {{< icon name="github" pack="fab" >}} **Send a pull request**: If you are sure the task is complete then use github to send a pull request. The pull request tells the project manager that the work on this branch is complete and ready to be added to the master branch. It is the responsibility of the project manager to respond to the pull request and merge it into the master branch. The pull request can be to merge two branches from the same repository, as we will mostly do in this course. This is the case for team members working on the same repo: 
 

@@ -24,11 +24,11 @@ Slides for this section can be found [here]({{< ref "/slides/350/intro/index.md"
 We will cover a number of prerequisites for the course before we dive into web application development. Specifically, we will need to cover the following topics:
 
 0. [Introduction to the development environment]()
-1. [Quick Python review, including Object Oriented]({{< ref "python.md" >}}) Programming and some useful Python features.
-2. [Remote collaboration]({{< ref "collab.md" >}}) on software projects.
-3. [Project management]({{< ref "proj-mgt.md" >}}) for team based projects.
-4. [Overview of web applications]({{< ref "webapplications.md" >}}).
-5. [Overview of the Django development process]({{< ref "dev-process.md" >}}).
+1. [Remote collaboration]({{< ref "collab.md" >}}) on software projects.
+2. [Project management]({{< ref "proj-mgt.md" >}}) for team based projects.
+3. [Overview of web applications]({{< ref "webapplications.md" >}}).
+4. [Overview of the Django development process]({{< ref "dev-process.md" >}}).
+5. [Quick Python review, including Object Oriented]({{< ref "python.md" >}}) Programming and some useful Python features.
 
 Following this introduction, we can start with our first project for this course where you will create [Blog web application]({{< ref "blog-project" >}}).
 
