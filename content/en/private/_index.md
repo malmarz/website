@@ -11,3 +11,11 @@ _build:
 
 - [Setup for instructors]({{< ref "private/setup" >}})
 - [Grading Poll Project Part 1]({{< ref "private/part1" >}})
+
+## To bulk delete from powershell
+
+```powershell
+Get-Content repos_names.txt | ForEach-Object { gh repo delete --yes $_ }
+```
+
+repo_names.txt: contains names of repos to be delted
