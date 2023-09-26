@@ -111,20 +111,27 @@ graph TD
 {{< figure src="courses/350/github_fetch.png" caption="Switching branches can be done using GetHub Desktop from the top panel." >}}
 
 
-4. {{< icon name="desktop" pack="fas" >}} **Working on the task**: Ensure that the task you are working on is small and simple. If there are large and complex tasks, break them down into smaller tasks.
+4. {{< icon name="desktop" pack="fas" >}} **Working on the task**: Ensure that the task you are working on is small and simple. If there are large and complex tasks, break them down into smaller tasks. 
+
 5. {{< icon name="desktop" pack="fas" >}} **Commit the task**: Upon completion of the task, or reaching a milestone in your work, you must commit the work. This would allow you to create a snapshot of the work you did to be stored in the github history. The advantage of having a commit snapshot is that you can return to this version of the code any time. Therefore, it is recommended to commit frequently and even for small changes. Just make sure when you commit that you write a useful message for the history to know what you did in that commit. You must always commit and test your work and continue to change the code and commit until you are sure that the changes you did are acceptable and the task is complete.
-   {{< figure src="courses/350/replit-commit.png" caption="Commit Your Work to Store It on GitHub" >}}
-6. {{< icon name="github" pack="fab" >}} **Send a pull request**: If you are sure the task is complete then use github to send a pull request. The pull request tells the project manager that the work on this branch is complete and ready to be added to the master branch. It is the responsibility of the project manager to respond to the pull request and merge it into the master branch. The pull request can be to merge two branches from the same repository, as we will mostly do in this course. This is the case for team members working on the same repo: 
+   {{< figure src="courses/350/github_commit.png" caption="Github desktop lists all changes you have made since last commit, add a summary then click commit" >}}
 
-{{< figure src="courses/350/pr-simple.png" caption="Creating a Simple Pull Request to Merge Branch nn Current Repo" >}}
 
-It can also be used to request merging branches between forked repositories and allow you to send your work to a project that you are not a member of:
 
-{{< figure src="courses/350/pr-forks.png" caption="Creating a Pull Request To Merge Branch From Forked Repo" >}}
+6. {{< icon name="github" pack="fab" >}} **Create a pull request**: If you are sure the task is complete then you need to create a pull request to let the project manager know that your work is ready to be merged to master. To create a pull request you must:
+   1. Push/publish your branch to GitHub. This would send all the commits you did to the branch to GitHub. This is done by clicking the push/publish button on GitHub desktop.
 
-Once a pull request is created the project manager and team members can discuss this pull request and see what is done so far by the project manager regarding the matter.
+   {{< figure src="courses/350/github_publish_branch.png" caption="Pushing your branch to GitHub" >}}
 
-{{< figure src="courses/350/pr-discussion.png" caption="Memebers Can Open the Pull Request to See all Change Details and Discussion" >}}
+   2. Create a pull request on GitHub. This is done by clicking the pull request button on GitHub desktop. This would open the pull request page on GitHub in your browser. The project manager then examines the work and can make one of two decision:
+
+      - The work is complete, then the project manager merges the branch to master. This signals the end of the task it the work is now part of the master branch. Anyone who performs a fetch/pull on their local master branch will get these changes in their master.
+
+      - The work is not complete, then the project manager can comment on the pull request and ask the developer to make changes. The developer can then make the changes and commit them to the branch and push the branch again to update the pull request. The project manager can then reexamine the work and decide to merge it or ask for more changes.
+
+   {{< figure src="courses/350/pr-simple.png" caption="Creating a Simple Pull Request to Merge Branch nn Current Repo" >}}
+
+   {{< figure src="courses/350/pr-discussion.png" caption="Memebers Can Open the Pull Request to See all Change Details and Discussion" >}}
 
 
 Everyone is expected to follow these steps whenever you work on development projects in this course. It might seem like an overhead at first, and you will not see the benefits right away. However, the goal is to get you to practice how to code as part of a team. So when you start your final project, you will start to see the benefits of this workflow.
