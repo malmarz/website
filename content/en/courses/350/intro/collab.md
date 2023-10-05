@@ -177,7 +177,7 @@ There are numerous terms that you need to be aware of to use Git and GitHub effe
 
 ## Collaboration Assignment
 
-1. Start forming teams of 2 students and agree who will be the project manager for the team.
+1. Start forming teams of 2 students and agree who will be the project manager for the team .
 2. Use the following link on github classroom to form your team and setup the assignment: 
    [https://classroom.github.com/a/vOWvfACp](https://classroom.github.com/a/vOWvfACp)
 3. The assignment is team based, each team member must perform the following tasks using the workflow we explained in class:
@@ -185,11 +185,21 @@ There are numerous terms that you need to be aware of to use Git and GitHub effe
       - The name of the team members
       - The name of the project manager
       - Commit and push changes to master
-   - After repository is created, each team member must create an .md file named after their name. For example, if the team member's name is John Doe, then the file name would be john-doe.md. The file must include the following:
+   - After repository is created, each team member must create an .md file named after their name. For example, if the team member's name is John Doe, then the file name would be john-doe.md. The file must include the following :
       - A brief introduction about the team member
       - A list of the courses the team member has taken so far
       - A table (it could be of anything)
       - An image (can be any image from google)
       - A link to any website
       - The goal from creating this file is to learn the markdown language and how to use it to create content on GitHub. You can find information on markdown at [https://guides.github.com/features/mastering-markdown/](https://guides.github.com/features/mastering-markdown/)
-   - Each team member must (including the project manager) must modify the README.md file to include a link to their file. For example, if the team member's name is John Doe, then the link would be [John Doe](john-doe.md). Include the link next to your name in the README.md file. Note that you should create a branch and commit your changes to the branch, then send a pull request to the project manager to merge your changes to the master branch.
+   - Each team member must (including the project manager) must modify the README.md file to include a link to their file. For example, if the team member's name is John Doe, then the link would be [John Doe](john-doe.md). Include the link next to your name in the README.md file. Note that you should create a branch and commit your changes to the branch, then send a pull request to the project manager to merge your changes to the master branch 
+   
+   ### Grading
+   - The team will receive:
+      - 10 pts for creating readme.me file with correct info
+      - 30 pts for demostrating all member involvement and have their pull requests merged (based on git history)
+   - Each team member will receive:
+      - 20 pts for creating their own .md file
+      - 20 pts for correctly creating a branch 
+      - 20 pts for successfully sending a pull request to the project manager
+
