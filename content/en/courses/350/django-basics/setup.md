@@ -23,29 +23,77 @@ Switch to branch **1-setup** from **malmarz/isom350-blog** github repo to see th
 {{% /callout %}}
 
 ## First Create A Django Project
-### Using Replit
 
-To setup our blog project, create a replit using **Django Template**. You will initially get a code structure that looks like the following:
 
-{{< figure src="courses/350/project-structure.png" caption="Project Structure" >}}
-
-### Using VS Code
-
-To setup a Django project using VS Code [open the Terminal]({{{< ref "terminal.md" >}}}) then type the following command:
+To setup a Django project using VS Code [open the Terminal]({{< ref "terminal.md" >}}) then type the following command:
 
 ```bash
 > django-admin startproject mysite
 ```
 
-Replace mysite with the name you want to give your project. The same directory structure as the one from replit will be created for you to hold your code.
+Replace mysite with the name you want to give your project. If Python and Django are installed correctly, you should see the following files created in your project directory:
+
+{{< figure src="courses/350/django_startproj.png" caption="Django Project Files" width=50% >}}
+
+
+## Running the Development Server
+
+If you did everything correctly, you should be able to run the Django development server and see the default Django welcome page. To run the development server you need to use the manage.py. This file is a very important file that you can use to perform many tasks related to managing your project. You use it by first making sure you are in the same working directory as the manage.py file. So you need to be in the top **mysite** directory. So lets move to it by typing the following command in terminal:
+
+```bash
+cd mysite
+``` 
+
+To confirm you are in the same directory as manage.py, type the following command in terminal:
+
+```bash
+ls
+```
+
+You should see something similar to the following output depending on your operating system:
+
+```bash
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        10/14/2023   8:01 PM                blog
+d-----        10/14/2023   8:01 PM                mysite
+-a----        10/14/2023   8:17 PM              0 db.sqlite3
+-a----        10/14/2023   7:59 PM            684 manage.py
+
+```
+Make sure that **manage.py** is listed in the output. If it is not, then you are not in the correct directory. You can use the **cd** command to move to the correct directory.
+
+Now that you are in the correct directory, you can run the development server by typing the following command in terminal:
+
+```bash
+python manage.py runserver
+```
+
+If the development server started correctly, you should see output similar to the following in the terminal:
+
+```bash
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+October 14, 2023 - 20:17:27
+Django version 4.2.6, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+```
+
+Now you can open a browser and go to the URL mentioned in the output, which is [http://127.0.0.1:8000/](http://127.0.0.1:8000/). You should see the following Django welcome page:
+
+{{< figure src="courses/350/django_dev_success.png" caption="Django Development Server Running" >}}
 
 ## Then Create An App Directory
 
-We must then create an app directory for our code because in Django, we must create at least a sinlge app in our project to be able to write code. We use the shell commands provided by Django to easily generate the app directory that will hold our code by first openning the shell:
+Building a data-driven web application involves creating web pages that each perform one of four CRUD operations (Create, Read, Update, or Delete). To create these pages, we must create at least a single app directory in our project to hold them in. Again, we will use **manage.py** to create the app directory.
 
-{{< figure src="courses/350/shell.png" caption="Using the Shell" >}}
-
-Now in the shell, type the following command:
+To do that, make sure you are in the same working directory as the *manage.py* file. Now type the following command terminal to create an app named **blog**:
 
 ```bash
 python manage.py startapp blog
@@ -53,11 +101,7 @@ python manage.py startapp blog
 
 The system will perform a few tasks and you will notice that a new **blog** directory is created in your project containing a set of files:
 
-{{< figure src="courses/350/app.png" caption="Blog App Directory" >}}
-
-**If you do get an error** when typing the command click on the Run{{< icon name="play" pack="fas" >}} button up top and make sure everything is running correctly, then stop the server and type the startapp shell command again and it should work this time. If your project was setup correctly, you should see the following screen:
-
-{{< figure src="courses/350/dev-server.png" caption="Django Development Server Running" >}}
+{{< figure src="courses/350/django_startapp_blog.png" caption="Blog App Directory files created using startapp command" >}}
 
 The app directory will contain the standard files you will need to put your code in. They are:
 1. **admin.py:** Using to configure the admin interface for managing all the data.
@@ -87,3 +131,4 @@ INSTALLED_APPS = [
     'blog',  # Make sure this line is added
 ]
 ```
+If you fail to configure the app in the `INSTALLED_APPS` list, you will not be able to access any page that you create. So make sure you do not forget this step. You need to do this configuration only once when you create a new app.

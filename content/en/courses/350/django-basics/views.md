@@ -12,7 +12,7 @@ date: 2021-03-23
 type: book
 
 # Position of this page in the menu. Remove this option to sort alphabetically.
-weight: 30
+weight: 20
 
 draft: false
 
@@ -26,6 +26,10 @@ To construct a view using Django, a developer must complete the following tasks:
 1. Create a view function in the apps views.py file 
 2. Link the view function to a url path in the root urls.py
 3. Optionally, create a template that hold the design of the view
+
+{{% callout note %}}
+These are the three main steps you perform whenever you create a page. Get used to them by repeating them constantly.
+{{% /callout %}}
 
 ### View Functions
 

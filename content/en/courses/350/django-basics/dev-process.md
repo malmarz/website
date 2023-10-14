@@ -1,9 +1,9 @@
 ---
 # Page title
-title: The Django Development Process
+title: Summary of Django Development Process
 
 # Title for the menu link if you wish to use a shorter link title, otherwise remove this option.
-linktitle: Django Development Process
+linktitle: Summary
 
 # Date page published
 date: 2021-03-23
@@ -12,15 +12,22 @@ date: 2021-03-23
 type: book
 
 # Position of this page in the menu. Remove this option to sort alphabetically.
-weight: 10
+weight: 60
 
 draft: False
 
 
 ---
 
+The most basic building block in any web application is the webpage. We have shown how to create it in Django in its simplist form without taking advantage of many of the features that Django offers. These can be summarized in the following steps:
 
-## The Steps in the Django Development Process
+1. Create a view function in the apps views.py file 
+2. Link the view function to a url path in the root urls.py
+3. Optionally, create a template that hold the design of the view
+
+Next, will will discuss how typical **data-driven** web applications are created in Django. They can be a bit more involved because you have to deal with setting up a database and configuring the schema. However, Django makes this process very easy and straightforward and it is part of configuring your project. So you will do it once, and if the database is designed correctly, you will not have to worry about it again. 
+
+## The Steps in Building a Data-Driven Web Application
 
 Another benefit to adhering to the Django way of doing things is that it makes the development process more predictable. If the functional and data requirements are already known, then the way in which development is done is as follows:
 
@@ -37,43 +44,13 @@ F -->|Refine or Work on Next Subproject|B
 
 ## The Steps
 ### 1- Setup Project
-The setup project step is done only once at the start of the project. It creates the source code directory structure for the django project. There are three main methods to create a Django project:
-
-1. **(Recommended for this course)** Creating a **Django Template** project in replit.com. 
-
-{{< figure src="courses/350/replit-django-template.png" caption="Creating a Django Project on Replit.com" width=50% >}}
-
-2. Importing an existing Django project from GitHub. GitHub project can be a new Django project or forked from a Django project. Use this option when you want to collaborate on an existing project.
-3. Using **shell** you type a command to create a Django project. **Works only if Django is already installed on your PC or repl, a bit advanced, so avoid using this course**. This is the shell command:
-
-```
-$ django-admin startproject name-of-project
-```
-
-When the project is created it will have the following structure:
-
-{{< figure src="courses/350/project-structure.png" caption="Project Structure" >}}
-
-The most important files are:
-1. **manage.py:** This is used to execute project commands, such as creating apps, running the django server, and creating a superuser.
-2. **urls.py:** This is the main file which describes what the paths the web application will contain. Typically, each path will point to a single feature.
-3. **settings.py:** This is where all the project configuration will reside. This will be need modification when starting the project for the first time.
-
-To confirm that your setup works on replit.com, click on the Run{{< icon name="play" pack="fas" >}} button up top, and you should see the following in your browser:
-
-{{< figure src="courses/350/run_django.png" caption="Running Django on Replit.com" width=75% >}}
-
-You are ready to start working on your Django project if you see this screen, and remember, the development Django server must be running for you to see your work. To stop the server, you need to click the Stop{{< icon name="stop" pack="fas" >}} button up top.
-
-It is highly recommended that you open the webserver in it's own browser window. This would allow you to easily navigate your web application by entering different URLs to test different parts of the application.
+The setup project step is done only once at the start of the project. It creates the source code directory structure for the django project. This process does not change from what we discussed in the previous section.
 
 ### 2- Start App or Subproject
 
 All code is organized into directories called apps. The first step in any project is to setup the directory structure for the source code files. Django has a very particular way in which files must be organized. It also requires that we put code related for different functionality in specific files. For example, database related code is usually placed in models.py, and http related functionality in views.py and so on. 
 
-The organizational unit for Django functionality is an App. It is a directory containing related source code to serve a specific function in the web application. Every project must have at least a single app directory to hold the functionality created by the developer. Django provides a number of shell commands to generate the directory structure needed for a project so that developers might start their projects easily. We will discuss this step in more detail in our sample project, but keep in mind that this step is necessary and is done once at the start of the project.
-
-{{< figure src="courses/350/app.png" caption="Example App Directory" >}}
+The organizational unit for Django functionality is an App. It is a directory containing related source code to serve a specific function in the web application. Every project must have at least a single app directory to hold the functionality created by the developer. Django provides a number of shell commands to generate the directory structure needed for a project so that developers might start their projects easily. We will discuss this step in more detail in our sample project, but keep in mind that this step is necessary and is done once at the start of the project and will be more involved in data-driven apps than we have discussed in the previous section.
 
 ### 3- Define Data Models
 
@@ -106,7 +83,9 @@ Once our data requirements are defined in models.py, we can move to the next ste
 
 ### 4- Create View Function
 
-A view function is how we create functionality in Django. A view function is a function whose first parameter is an HTTP Request. Django will use these functions to forward HTTP requests to our code using this first argument in the function where we can write code to process it and perform the tasks of the web application.
+A view function is how we create functionality in Django. We have already discussed view functions in the previous section and the requirements remain the same. The only difference for data-driven applications is that we start to use the Models we defined in the previous step in data-driven view functions. 
+
+Let's summarize what a view function is again because of its importance. A view function is a function whose first parameter is an HTTP Request. Django will use these functions to forward HTTP requests to our code using this first argument in the function where we can write code to process it and perform the tasks of the web application.
 
 The second requirement of the view function is that it must return an HTTP Response. Django provide some convenience functions that make constructing responses easy for the developer. Failure to meat these two conditions when defining a view function means that Django will not be able to run the function correctly.
 
@@ -123,7 +102,6 @@ def current_datetime(request):
 ```
 
 Once a view function is constructed, you can use the Python command line interface to test these functions and make sure they perform the right tasks. The function will not be availble to users of the web application unless you follow the requirements of the next step.
-
 
 
 ### 5- Wire URLs
