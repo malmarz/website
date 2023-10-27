@@ -14,15 +14,25 @@ type: book
 # Position of this page in the menu. Remove this option to sort alphabetically.
 weight: 100
 
-draft: true
+draft: false
 ---
 
 {{% callout note %}}
-Demonstrations are due on day before last of our class, Jan 8th during class time
+Demonstrations are due on day before last of our class, Monday, Dec 25th during class time
 {{% /callout %}}
 
+# Your Options
+Since this is a project course, you are expected to work on a project. You have two options to choose from:
+1. You can choose your own project.
+2. You can choose to work on the e-commerce project described below.
 
-## Project Description
+## Option 1: Choose Your Own Project
+
+You can choose your own project if you think this will drive you to learn more. I will require that you submit a proposal describing your project and include the complete requirements. Your proposal should be shown to me after class or during office hours. You **must get my approval before you can take this options**.
+
+Teams have until Nov 9th to get my approval. Otherwise, they will be forced to take the e-commerce project.
+
+## Option 2: E-Commerce Project
 
 You sit down with a representative of an online retailing business that are looking to build a new e-commerce platform for their business. In the interview, he gives the following description of what they want in the new platform:
 
@@ -38,17 +48,22 @@ The description would be a good start for your team to set the main requirements
 
 USe this description to build the ER Diagram for your project then start putting together requirements in the form of tickets. Then start implementing the system and updating the tickets as you get more ideas on how to improve the system. Do your best to implement as much of the requirements as you can. Be sure to leave the tickets that you do not complete in the ticket management system as it will indicate how much you have thought about the system.
 
-## Requirements
 
-- [Signup your team](https://classroom.github.com/a/GxWpg7CE)
+## Requirements For Both Options
+
+- [Signup your team](https://classroom.github.com/a/nzIxyJ4Q).
 - Team must agree on a project manager. Write the name of the team members on the readme file and make clear who the project team leader is.
-- Read the description of the project then perform the following project management and design tasks
-  - Determine the information requirements of the project by drawing the ER-Diagram. You can use [draw.io](https://draw.io/) then download the image and post it in the Readme file of the project.
-  - Create tickets for the requirements of the project and continue to update them as the requirements are updated
+- **If you chose option 1:** You must describe the complete requirements of your projects in the Readme file of the project.
+- **If you chose option 2:** You must make clear in the readme file that you are working on the e-commerce project and give your project a unique name that reflects what you are selling or the imaginary company you are serving.
+- **For both project options:** perform the following project management and design tasks
+  - Determine the information requirements of the project by drawing the ER-Diagram. You can use [ERD Plus](https://erdplus.com/) then download the image and post it in the Readme file of the project.
+  - Determine the requirements of the project in one of two options:
+    1. Write the requirements in the Readme file of the project. They should be broken down into specific task exactly like the requirements in the Poll project assignment you worked on. Each requirement must describe a single task.
+    2. **Optional (Bonus based on how well you use it):** Utilize a ticketing system to manage and coordinate your project. Requirments will be written as ticket. You must read and learn agile project management skills on your own here. You will need to invest some time reading and trying out the process. Your options are:
+  - [GitHub issues](https://docs.github.com/en/issues)
+  - [Trello](https://trello.com/guide)
+  - [Jira](https://www.atlassian.com/software/jira/guides/getting-started/introduction#what-is-jira-software)
 
-{{< figure src="github-project.jpg" >}}
-
-- Utilize the ticketing system and GitHub to collaborate with your team members to complete the projects.
 - Arrange to bring one of your PC to class and use it to demonstrate your project.
 - **Important:** Try to go beyond the provided requirements to make your application more valuable. You can only achieve this if you spend time learning new things about Django and utilize your time in class wisely.
 
@@ -101,5 +116,5 @@ Teams are expected to utilize what they have learned in this course about GitHub
 
  1. Determine that the work was done by the group and not a 3rd party. The group could receive a zero on this project if they received outside assistance. Remember, this is an investment in your self. Work hard to gain the experience.
  2. Determine that the application works as expected.
- 3. Evaluate bonus grades which. Your group is expected to list all additions done to the project worthy of a bonus grade in a section named **Bonus Items** in the Readme file of the project. List additional features to the requirements and any Django features you used that we did not explain in class. Be sure to list the file and line number that feature was implemented so your instructor can confirm its use. **Failure to follow this instruction would mean that the project team would not receive any bonus points, only listed bonus items will receive grades**.
+ 3. Evaluate bonus grades which. Your group is expected to list all additions done to the project worthy of a bonus grade in a section named **Bonus Items** in the Readme file of the project. List additional features to the requirements and any Django features you used that we did not explain in class. Be sure to list the file and line number that feature was implemented so your instructor can confirm its use. **Failure to follow this instruction would mean that the project team would not receive any bonus points, only listed bonus items will receive grades**. You can get ideas for bonus activities by reading the [advanced django section]({{< ref "django-advanced" >}}).
 
