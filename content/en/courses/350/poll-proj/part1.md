@@ -19,8 +19,10 @@ draft: False
 ---
 
 {{% callout note %}}
-Due Date is <strong>Sunday Dec 12th 10am</strong>
+Due Date is <strong>Thursday Nov 9th 2pm</strong>
 {{% /callout %}}
+
+You are expected to work as a team on this project. Be sure to follow the workflow that we have explained in class/lab, including the pull request. Part of your assisment will be based on how well you work as a team and use the tools provided by GitHub to collaborate. It will be the responsibility of the project manager to ensure that the team is working together and that the work is distributed fairly.
 
 ## Requirements for This Assignments 
 
@@ -35,11 +37,18 @@ Due Date is <strong>Sunday Dec 12th 10am</strong>
 
 ### Improve Admin Interface with Following Features:
 
-- [ ] Show poll questions, active date, and statue as a list
+- [ ] Show poll questions, active date, and status as a list
 - [ ] Allow for searching poll questions
 - [ ] Filter questions based on status
 - [ ] Show Poll option list showing poll question and option
 - [ ] Show response name, time, option, and poll for responses.
+
+### ReadMe.md
+- [ ] Update the readme file with a section to detail how work was ditributed. The section should include the following:
+    - Who was the project manager
+    - How work was distributed
+    - How the team collaborated
+    - Any other information you think is relevant to the project management process
 
 ### Bonus Tasks
 
@@ -78,9 +87,10 @@ erDiagram
 
 ## How to Start and Submit Your Project
 
-1. Join the [poll-project assignment on github classroom](https://classroom.github.com/a/jX0XTN4o).
-2. Clone your assignment project using GitHub desktop to your computer and remember to work on the main/master branch.
-3. When done, commit then push your work using GitHub Desktop. You can continue to make changes and push code after submission.
+1. Join the [poll-project assignment on github classroom](https://classroom.github.com/a/NSd26UjQ).
+2. Clone your assignment project using GitHub desktop to your computer and remember to NOT work on the main/master branch except when setting up the project by the project manager. 
+3. All tasks must be performed in their own branch and merged to master using a pull request. 
+4. When done, commit then push your work using GitHub Desktop. Remember, you can continue to make changes and push code after submission until the deadline.
 
 ## Grading Criteria
 
@@ -88,5 +98,6 @@ erDiagram
 - If submitted project works, breakdown of grades is as follows (Partial credit could be awarded):
     - Proper directory setup **10 pts**
     - Proper model configuration **10 pts**
-    - Proper Admin interface setup **20 pts**
-    - Proper test data entry **10 pts**
+    - Proper Admin interface setup **15 pts**
+    - Proper test data entry **5 pts**
+    - Demonstrating proper team work and collaboration **10 pts**
