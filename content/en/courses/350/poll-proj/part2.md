@@ -14,22 +14,29 @@ type: book
 # Position of this page in the menu. Remove this option to sort alphabetically.
 weight: 40
 
-draft: true
+draft: false
 
 ---
 
 {{% callout note %}}
-Due Date is <strong>Sunday Dec 26th before 10AM</strong>
+Due Date is <strong>Thursday Nov 16th 2pm</strong>
 {{% /callout %}}
 
-## Requirements for This Assignments (50 pts)
+## Requirements for This Assignments 
 
-- [ ] **10 pts:** Create a view to list all the posts which have a **published** status. For each poll in the list, show the poll title and date it will be active until.
-- [ ] **10 pts:** Create a view to list all the posts which have a **unpublished** status,  For each poll in the list, show the poll title and date it will be active until.
-- [ ] **5 pts:** Create an index view which allows the user to select whether to open the list view for published polls or the list view for unpublished polls (**Hint:** This is just a page with two links to the previous list views).
-- [ ] **10 pts:** Create a view to show the details of a single poll which include the title, the questions, and list of choices available
-- [ ] **5 pts:** In both poll list views, make the title of each poll into a link that opens the corresponding poll's detailed view when clicked.
+- [ ] **15 pts:** Create a view to list all the posts which have a **published** status. For each poll in the list, show the poll title and date it will be active until.
+- [ ] **15 pts:** Create a view to list all the posts which have a **unpublished** status,  For each poll in the list, show the poll title and date it will be active until.
+- [ ] **10 pts:** Create an index view which allows the user to select whether to open the list view for published polls or the list view for unpublished polls (**Hint:** This is just a page with two links to the previous list views).
+- [ ] **15 pts:** Create a view to show the details of a single poll which include the title, the questions, and list of choices available
+- [ ] **10 pts:** In both poll list views, make the title of each poll into a link that opens the corresponding poll's detailed view when clicked.
 - [ ] **10 pts:** In both poll list views, show number of options for each poll.
+
+### ReadMe.md
+- [ ] Update the readme file with a section to detail how work was ditributed. The section should include the following:
+    - Who was the project manager
+    - How work was distributed
+    - How the team collaborated
+    - Any other information you think is relevant to the project management process
 
 ### Bonus Tasks
 
@@ -48,7 +55,9 @@ These tasks will involve reading the Django documentation and figuring out thing
 2. Clone your assignment project using GitHub desktop to your computer and remember to work on the main/master branch.
 3. When done, commit then push your work using GitHub Desktop. You can continue to make changes and push code after submission.
 
-## Grading Criteria
+## Grading Criteria (Total 100 pts, 10% of total grade)
 
 - If submitted project doesn't work, you will receive **5 pts only**
-- If submitted project works, breakdown of grades shown next to each requirement (Partial credit could be awarded)
+- Demonstrating proper team work and collaboration **25 pts**
+    - Use of pull requests, branching, and proper merging will be checked.
+- If submitted project works, breakdown of grades shown next to each requirement (Partial credit could be awarded) **75 pts**

@@ -92,12 +92,13 @@ erDiagram
 3. All tasks must be performed in their own branch and merged to master using a pull request. 
 4. When done, commit then push your work using GitHub Desktop. Remember, you can continue to make changes and push code after submission until the deadline.
 
-## Grading Criteria
+## Grading Criteria (Total 100 pts, 10% of total grade)
 
-- If submitted project doesn't work, you will receive **5 pts only**
+- If submitted project doesn't work, you will receive **10 pts only**
 - If submitted project works, breakdown of grades is as follows (Partial credit could be awarded):
     - Proper directory setup **10 pts**
-    - Proper model configuration **10 pts**
-    - Proper Admin interface setup **15 pts**
-    - Proper test data entry **5 pts**
-    - Demonstrating proper team work and collaboration **10 pts**
+    - Proper model configuration **20 pts**
+    - Proper Admin interface setup **30 pts**
+    - Proper test data entry **10 pts**
+    - Demonstrating proper team work and collaboration **30 pts**
+        - Use of pull requests, branching, and proper merging will be checked.

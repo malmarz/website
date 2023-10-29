@@ -14,21 +14,28 @@ type: book
 # Position of this page in the menu. Remove this option to sort alphabetically.
 weight: 50
 
-draft: true
+draft: false
 
 ---
 
 {{% callout note %}}
-This is an **optional** assignment.
- Due Date is <strong>Thursday Jan 6th before 10AM</strong>
+This is an **optional** assignment and will give you an opportunity to make up for your quiz and assignments grades.
+Due Date is <strong>Thursday Nov 23rd 2pm</strong>
 {{% /callout %}}
 
-## Requirements for This Assignments (50 pts)
+## Requirements for This Assignments 
 
-- [ ] **(10 pts)** Create a view to create a poll that redirects you back to the poll list upon successful completion (Excluding the options, another view will be used to create them)
-- [ ] **(10 pts)** Create a view to add a single option to a poll. Link the view to the detailed view of the poll where the user can input the option details and hit submit to add it to the poll. (**Hint:** The optino creation view should redirect the user to the detailed poll view)
-- [ ] **(20 pts)** Create a view that allows a user to submit their response to a poll.
-- [ ] **(10 pts)** Create a view that allows you to edit the poll question and title only. Upon successful completion the user should be redirected to the detailed poll view.
+- [ ] **(15 pts)** Create a view to create a poll that redirects you back to the poll list upon successful completion (Excluding the options, another view will be used to create them)
+- [ ] **(15 pts)** Create a view to add a single option to a poll. Link the view to the detailed view of the poll where the user can input the option details and hit submit to add it to the poll. (**Hint:** The option creation view should redirect the user to the detailed poll view)
+- [ ] **(30 pts)** Create a view that allows a user to submit their response to a poll.
+- [ ] **(15 pts)** Create a view that allows you to edit the poll question and title only. Upon successful completion the user should be redirected to the detailed poll view.
+
+### ReadMe.md
+- [ ] Update the readme file with a section to detail how work was ditributed. The section should include the following:
+    - Who was the project manager
+    - How work was distributed
+    - How the team collaborated
+    - Any other information you think is relevant to the project management process
 
 ### Bonus Tasks
 
@@ -45,7 +52,9 @@ These tasks will involve reading the Django documentation and figuring out thing
 2. Clone your assignment project using GitHub desktop to your computer and remember to work on the main/master branch.
 3. When done, commit then push your work using GitHub Desktop. You can continue to make changes and push code after submission.
 
-## Grading Criteria
+## Grading Criteria (Total 100 pts, 10% of total grade)
 
-- If submitted project doesn't work, you will receive any credit for this optional assignment
-- If submitted project works, breakdown of grades shown next to each requirement (Partial credit could be awarded) and it will replace the lowest grade for other assignments
+- If submitted project doesn't work, you will Not receive any credits for this assignment
+- Demonstrating proper team work and collaboration **25 pts**
+    - Use of pull requests, branching, and proper merging will be checked.
+- If submitted project works, breakdown of grades shown next to each requirement (Partial credit could be awarded) **75 pts**
