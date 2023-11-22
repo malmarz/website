@@ -20,7 +20,7 @@ draft: false
 
 {{% callout note %}}
 This is an **optional** assignment and will give you an opportunity to make up for your quiz and assignments grades.
-Due Date is <strong>Thursday Nov 23rd 2pm</strong>
+Due Date is <strong>Thursday Nov 30th 2pm</strong>
 {{% /callout %}}
 
 ## Requirements for This Assignments 
@@ -48,7 +48,7 @@ These tasks will involve reading the Django documentation and figuring out thing
 
 ## How to Start and Submit Your Project
 
-1. Join the [poll-project part 3 assignment on github classroom](https://classroom.github.com/a/VuVbhKlB).
+1. Join the [poll-project part 3 assignment on github classroom](https://classroom.github.com/a/BRv3EByY).
 2. Clone your assignment project using GitHub desktop to your computer and remember to work on the main/master branch.
 3. When done, commit then push your work using GitHub Desktop. You can continue to make changes and push code after submission.
 
