@@ -49,14 +49,119 @@ Mohammad AlMarzouq
 ### Agenda
 
 1. Why Python?
+  - Philosophy (no magic, no side effects, etc.)
+  - generic languages
+  - Great Ecosystem
+    - Great Libraries, Community, Resources, etc.
+  - Data Science and Machine Learning
+  - Web Development
+  - Interface with other languages
 2. Why Not Python?
-1. Development Environment 
-2. Hello World
+3. Development Environment 
+4. Hello World
 3. Basic Syntax
 4. Installing Libraries
 5. Important Libraries
 6. Reproducable Research
+7. Final Thoughts
 
 ---
 
-## Development Environment
+## Why Python
+
+---
+
+## Why NOT Python
+
+- Already invested in another language/tool
+- Network
+- Learning curve/Don't know where to start
+
+---
+
+## Development Environments
+
+### Writing Code
+- Any Text Editor
+
+### Executing Code
+- Python Interpreter required
+  - Script Mode
+  - Interactive Mode
+  - Hybrid/Notebook mode
+
+## ID of Choice
+
+- VSCode: This is a fancy editor
+- Need to install Python Interpreter
+- Need to install Python Extensions for VSCode
+  - Allows for easy running of code within IDE
+- Need to install Libraries as needed
+
+## Other IDEs
+### Cloud Based
+- Google Colab
+- Kaggle
+- JupyterHub
+- Replit.com
+
+### Desktop Based
+- PyCharm
+- Spyder
+- Jupyter Notebook
+- Jupyter Lab
+- RStudio
+
+---
+
+## Hello World
+
+- Create a hello.py file
+- Write the following code
+```python 
+print("Hello World")
+```
+- Run the code
+
+---
+
+## Things to Know Before Starting
+
+- Python Zen
+- PEP8
+- Idiomatic Python
+- Handy References
+  - https://www.pythoncheatsheet.org/
+  - Hitchhikers guide to python
+- Python 2 vs Python 3
+
+
+---
+
+## Basic Syntax
+- Variables
+- Data Types/Data Structures
+- Operators
+- Control Flow
+- Functions
+- Classes
+
+---
+
+## Installing Libraries
+
+---
+
+## Important Libraries
+
+https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf
+
+---
+
+## Reproducable Research
+
+---
+
+## Final Thoughts
+- Use Python to become proficient
+- https://software-carpentry.org/lessons/
