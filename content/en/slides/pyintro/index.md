@@ -156,6 +156,33 @@ print("Hello World")
 
 https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf
 
+numpy
+scipy
+sklearn
+matplotlib
+seaborn
+plotly
+altair
+statsmodels
+pandas
+networkx
+pydot
+tensorflow
+pytorch
+keras
+nltk
+spacy
+gensim
+tomotopy
+scrapy
+beautifulsoup
+pymc
+dowhy
+econml
+GROBID
+
+
+
 ---
 
 ## Reproducable Research
