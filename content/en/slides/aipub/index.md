@@ -1,5 +1,5 @@
 ---
-title: AI In Publications
+title: Prudence in using AI In Scientific Publishing
 summary: Risks and opportunities of using AI in the scientific publication process
 authors: []
 tags: [ai, dl, ml, publishing]
@@ -38,9 +38,22 @@ slides:
     history: true
 ---
 
-### Using AI in Scientific Publishing
-#### Risks and Opportunities
+### Prudence in Using AI
+#### in Scientific Publishing
 ##### By Mohammad AlMarzouq
+
+---
+
+## Agenda
+- Prudence in 
+  - AI Capabilities
+  - AI to write research
+  - AI in the editorial process
+- General advice and lessons learned
+
+---
+
+## Prudence in AI Capabilities 
 
 ---
 
@@ -52,7 +65,10 @@ slides:
 
 ---
 
-## Important Concepts
+### Important Concepts
+- Artificial Intelligence (AI)
+- Machine Learning (ML)
+- Deep Learning (DL)
 
 ---
 
@@ -73,6 +89,9 @@ slides:
 
 
 ## Evolution of Programming 
+- Conventional Programming
+- Machine Learning Programming
+- Deep Learning Programming
 
 ---
 
@@ -83,38 +102,102 @@ slides:
 
 ---
 
-## Machine Learning
+### Machine Learning Programming
 - Programmer trains model
   - Chooses algorethims
   - Provides data 
   - Selects important features
-
 - Models 
   - Learns patterns from data
   - Make predictions
 
 ---
 
-## Deep Learning Programming
-
+### Deep Learning Programming
 - Programmer trains model
-  - chooses complex neural network algorethims
+  - Chooses complex neural network algorethims
   - Provides large dataset 
-
 - Models
   - Learns complex patterns
   - Finds important features
   - Make predictions
 
+---
+
+## What is Causing all this Exciement?
+- Deep Learning AI models
+- Specifically, Deep Learning models that can produce human-like content
+  - These are called Generative AI models
+  - They can generate text, images, music, and more
+  - ChatGPT is an example
 
 ---
 
 ## Does AI Think on Its Own?
-- Lacks consciousness and self-awareness
-- Follows algorithms and patterns
-- Enhances tasks with speed and precision
+- No! people might think it does because:
+  - Has astonishing capabilities
+  - Limited programming effort
+    - Mostly training on data
+  - Unexplainable black box
+
+---
+
+### Examples of astonishing Capabilities
+  - Recognizes complex patterns unseen by humans
+  - Utilizes vast data to make insightful or precise predictions
+  - Output not distinguishable from human's
+
+---
+
+## However, AI
+  - Lacks original creativity 
+  - Relies on training data, could be biased
+  - Lacks consciousness and self-awareness
+  - Lack ability to recognize right from wrong
+    - Beware of hallucinations
+  - Requires human oversight
+
+---
+
+## Key Takeaways
+- Generative AI produces human-like content
+- Recombines and generates new content from training data
+- Lacks conciousness and creativity
 - Requires human oversight
 
+---
+
+## Prudence in AI to Write Research 
+
+---
+
+### You Have Been Using AI for Sometime in Research
+- Plagerism checkers
+  - iThenticate, Turnitin, etc.
+- Grammar and language checkers
+  - Grammarly, Word, etc.
+- Translation tools
+  - Google Translate, DeepL, etc.
+- Search engines
+  - Google, Bing, etc.
+
+---
+
+### What Changed?
+- AI impact is more observable with Generative AI
+- It can now: 
+  - Draft research papers and articles
+  - Create and refine research questions and outlines
+  - Simplify complex explanations
+  - Produce and analyze data
+  - Summarize papers and reviews
+  - Review and edit papers
+  - and more 
+
+---
+
+## ChatGPT
+- Latest too to have a significant impact
 
 ---
 
@@ -125,77 +208,93 @@ slides:
 - Trained on diverse internet text
   - Based on Deep Learning
 - Continuously updated for relevance
+  - Latest version is ChatGPT-4
 
 ---
 
 ## How to Use ChatGPT
-- Input prompts for specific tasks
-- Generate drafts for articles and papers
-- Create and refine research questions
-- Simplify complex explanations
+
+![](chatgpt.png)
 
 ---
 
+## How to Use ChatGPT
 
+- Write prompts
+  - Describing what you want
+  - Give an example of what you want
+  - Give document and ask for summary or refinement
+- Engage in conversation to refine output
+  - Ask to refine output
+  - Ask to explain how output is generated
+  
+---
 
-## AI's Functionality
-- Analyzes past data to predict outcomes
-- Identifies patterns unseen by humans
-- Adapts responses based on input
-- Lacks original creativity, relies on training data
+## Obvious Use Case by Researchers
+- Writing paragraphs, sections, or complete papers
+- O’Connor, S. & **ChatGPT**. (2023). Open artificial intelligence platforms in nursing education: Tools for academic progress or abuse? Nurse Education in Practice, 66, 103537. https://doi.org/10.1016/j.nepr.2022.103537
 
 ---
 
-## AI in Research
-- Supplements, doesn't replace, researchers
-- Risks of misinformation without verification
-- Enhances preliminary data analysis
-- Facilitates exploratory research phases
+## Risks
+- Will AI Replace researchers?
+  - Unlikely to happen given limitations of AI
+- Will researchers misrepresent AI-generated content as their own?
+  - More likely, content will be unoriginal and not reliable
+  - Refining the output likely to take more effort than writing it from scratch
 
 ---
 
-## Optimal Use of AI
-- Drafting and refining scientific texts
-- Automating literature reviews
-- Enhancing multilingual translation for research
-- Streamlining data collection and analysis
+## More Productive Uses of AI in Research
+- Summarize articles
+- Explain or simplify complex concepts
+- Analyze or visualize data
+- Generate empirical data from documents
+- Generate synthetic data for testing models
+- Generate/translate research instruments
+- Improve wording or paragraph
+- Draft outlines and research questions
+- and more
 
 ---
 
-## Effective AI Utilization
-- Iterative refining of AI outputs
-- Tailoring prompts for nuanced responses
-- Leveraging AI for interdisciplinary research
-- Awareness of AI's current linguistic capabilities
-
----
-
-## Misuse of AI
-- Overestimating AI's understanding of context
+## Beware of
 - Ignoring AI-generated content's need for validation
-- Misinterpreting AI's confidence as accuracy
-
----
-
-## What to Avoid
-- Blind trust in AI for factual accuracy
-- Sole reliance on AI for critical decision-making
-- Overlooking AI's potential for bias in data
-
----
-
-## Subject Matter Expertise
-- Crucial for guiding AI's application
-- Differentiates between plausible and accurate AI output
-- Enhances AI's utility with expert feedback
-
+  - Always validate, experience in subject matter is crucial
+- Relying on AI to produce new content
+  - It's a tool, not a replacement
+  - Write the content, ask AI to refine it
+- Not reporting to editors how AI was used in publication
+  - We are still trying to understand how AI is used in research
+  - Policies and guidelines are still evolving
+- Relying on first produced output
+  - Engage in conversation to refine output
+  - AI as a tool becomes more effective as you learn to use it
 ---
 
 ## Exploring Other Tools
-- Elicit for hypothesis generation and testing
-- iThenticate for ensuring originality of work
-- DALL·E and Stable Diffusion for visual content creation
-- Integrating tools for a comprehensive research workflow
+- Elicit
+- Consensus
+- Researchrabbit
+- SciSpace
+- Litmaps
+- Scite
+- Trinka
+- Scholarcy
+- iThenticate
+
+---
+
+## Key Takeaways
+- AI can be a powerful tool in research, that has been used for a while
+- New tools like ChatGPT are making AI more impactful
+- Other useful tools are available
+- AI should complement human expertise, not replace it
+- Guidelines on use of AI in research are still evolving
+
+---
+
+## Prudence in AI in the Editorial Process
 
 ---
 
@@ -203,7 +302,8 @@ slides:
 - Pre-screening submissions for relevance
 - Automated plagiarism checks
 - Enhancing peer review with AI-assisted tools
-- Personalizing content dissemination
+- Summarizing and comparing reviews
+- Improving communication language
 
 ---
 
