@@ -104,7 +104,7 @@ slides:
 
 ### Machine Learning Programming
 - Programmer trains model
-  - Chooses algorethims
+  - Chooses algorithms
   - Provides data 
   - Selects important features
 - Models 
@@ -115,7 +115,7 @@ slides:
 
 ### Deep Learning Programming
 - Programmer trains model
-  - Chooses complex neural network algorethims
+  - Chooses complex neural network algorithms
   - Provides large dataset 
 - Models
   - Learns complex patterns
@@ -124,7 +124,7 @@ slides:
 
 ---
 
-## What is Causing all this Exciement?
+## What is Causing all this Excitement?
 - Deep Learning AI models
 - Specifically, Deep Learning models that can produce human-like content
   - These are called Generative AI models
@@ -162,7 +162,7 @@ slides:
 ## Key Takeaways
 - Generative AI produces human-like content
 - Recombines and generates new content from training data
-- Lacks conciousness and creativity
+- Lacks consciousness and creativity
 - Requires human oversight
 
 ---
@@ -172,7 +172,7 @@ slides:
 ---
 
 ### You Have Been Using AI for Sometime in Research
-- Plagerism checkers
+- Plagiarism checkers
   - iThenticate, Turnitin, etc.
 - Grammar and language checkers
   - Grammarly, Word, etc.
@@ -242,6 +242,9 @@ slides:
 - Will researchers misrepresent AI-generated content as their own?
   - More likely, content will be unoriginal and not reliable
   - Refining the output likely to take more effort than writing it from scratch
+- Will researchers become too reliant on AI?
+  - Likely, risk is deskilling and loss of expertise
+  - Can be mitigated with guidelines and training
 
 ---
 
@@ -270,6 +273,7 @@ slides:
 - Relying on first produced output
   - Engage in conversation to refine output
   - AI as a tool becomes more effective as you learn to use it
+
 ---
 
 ## Exploring Other Tools
@@ -298,12 +302,39 @@ slides:
 
 ---
 
-## AI in the Editorial Process
-- Pre-screening submissions for relevance
-- Automated plagiarism checks
-- Enhancing peer review with AI-assisted tools
-- Summarizing and comparing reviews
-- Improving communication language
+- Role of editorial boards
+  - Think about the role of AI in the editorial process
+  - Establish guidelines and policies for AI use
+    - Transparency will be a minimum requirement
+  - Educate authors and reviewers on AI use
+- Utilizing AI in the editorial process
+  - Assist in screening submissions
+    - Avoid over-reliance on AI, likely to reject creative and innovative submissions
+  - Enhance peer review process
+    - Summarize and compare reviews
+    - Use AI as the third reviewer
+  - Improve communication language
+    - Enhance feedback/reports to be polite and constructive
+    - I would advise against using AI to write your reviews
+      - Same reasons as using AI to write research
+
+---
+
+# New Challenges
+
+- Undetectable plagiarism
+- AI doctored/generated data
+- Change in predatory practices
+- Possible overwhelming of conventional review process
+  - AI generated papers passing initial screening threshold
+
+---
+## Solutions
+- New tools to detect AI-generated content
+- Embrace AI tools and become familiar with their capabilities
+- Adoption of Open Science practices
+  - Open data, open access, open peer review
+- Be transparent about AI use
 
 ---
 
