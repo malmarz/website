@@ -142,6 +142,17 @@ slides:
 
 ---
 
+## AI as a Black Box
+- Challenges in understanding AI decision paths
+  - Makes it unpridinctable
+- Efforts towards explainable AI
+  - You can prompt the AI to explain its output
+- Balancing trust with transparency in AI systems
+- Educating users on AI capabilities and limitations
+
+---
+
+
 ### Examples of astonishing Capabilities
   - Recognizes complex patterns unseen by humans
   - Utilizes vast data to make insightful or precise predictions
@@ -197,7 +208,7 @@ slides:
 ---
 
 ## ChatGPT
-- Latest too to have a significant impact
+- Latest tool to have a significant impact
 
 ---
 
@@ -338,19 +349,14 @@ slides:
 
 ---
 
-## AI as a Black Box
-- Challenges in understanding AI decision paths
-- Efforts towards explainable AI
-- Balancing trust with transparency in AI systems
-- Educating users on AI capabilities and limitations
-
----
-
 ## Conclusion
 - AI's potential to transform scientific publishing is immense
 - Responsible use and ethical considerations are paramount
 - Collaboration between AI and human expertise is key
 - Continuous evaluation of AI's impact and evolution
+- Transparancy in use is necessary in moving forward
+- AI is a tool, not a replacement
+  - Rather than jobs disappearing, more likely people not using it in their jobs will disappear
 
 ---
 
