@@ -12,7 +12,7 @@ slides:
   #   Light style: github. Dark style: dracula (default).
   #   Available highlight themes listed in: https://highlightjs.org/static/demo/
   #   Use lower case names and replace space with hyphen '-'
-  highlight_style: dracula
+  highlight_style: github
 
   diagram: true
   diagram_options:
