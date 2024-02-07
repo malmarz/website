@@ -17,7 +17,7 @@ slides:
   diagram: true
   diagram_options:
     # Mermaid diagram themes include: default,base,dark,neutral,forest
-    theme: forest
+    theme: default
 
   # RevealJS slide options.
   # Options are named using the snake case equivalent of those in the RevealJS docs.
