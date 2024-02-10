@@ -35,10 +35,12 @@ image:
 
 ## Requirements
 
-While there are many ways to use python, development can be done locally or in the cloud. We will recommend the use of local development for this course. To setup for this course, you will be required to perform the following:
+While there are many ways to use python, development can be done locally or in the cloud. I will recommend the use of local development for this course. To setup for this course, you will be required to perform the following:
 
 - Install [anacoda python](https://www.anaconda.com/products/individual#Downloads)
 - Install [Visual Studio Code](https://code.visualstudio.com/download)
 
+Instructions on how to setup VS code for python development can be found [here](https://code.visualstudio.com/docs/python/python-tutorial)
+
 ## Course Content
-Slides can be found [here]({{< ref "slides/pyintro" >}}) for this session.
+Slides for this session can be found [here]({{< ref "slides/pyintro" >}}).
