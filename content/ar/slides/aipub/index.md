@@ -47,6 +47,9 @@ slides:
 
 جامعة الكويت
 
+mo.almarzouq@ku.edu.kw
+https://journals.ku.edu.kw/ajas
+
 
 
 ---
@@ -506,3 +509,6 @@ O’Connor, S. & ChatGPT. (2023). Open artificial intelligence
 - DeepL للترجمة
 
 نشكر لكم حسن استماعكم
+
+mo.almarzouq@ku.edu.kw
+https://journals.ku.edu.kw/ajas
