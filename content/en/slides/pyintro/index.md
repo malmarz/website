@@ -200,11 +200,9 @@ Mohammad AlMarzouq
 - VSCode
   - Likely to be part of your workflow for other languages/tasks
   - Extensions and copilot make it a powerful tool
-  - Allows you to execute python in different modes
-    - Including notebooks
+  - Allows you to execute python in different modes, *even notebooks*
   - Well integrated with Git/Github
-    - Can run in the cloud on `vscode.dev`
-    - Try replacing `github.com` with `github.dev` in the URL for any repo
+    - Replace `github.com` with `github.dev` in the URL for any repo
 ---
 
 ### VSCode Requirements for Python
@@ -225,26 +223,260 @@ print("Hello World")
 
 ---
 
-## Things to Know Before Starting
+### Things to Know Before Starting
 
 - Python Zen
-- PEP8
-- Idiomatic Python
-- Handy References
-  - https://www.pythoncheatsheet.org/
-  - Hitchhikers guide to python
-  - https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf
+- PEP8 and Idiomatic Python
+  - Writing and styling code the pythonic way
+  - Great summaries at
+    - [Python.org](https://www.python.org/dev/peps/pep-0008/)
+    - [Real Python](https://realpython.com/python-pep8/)
+    - [Hitchhikers guide to python](https://docs.python-guide.org/writing/style/)
+- Python is case sensitive
 - Python 2 vs Python 3
 
 ---
 
-## Basic Syntax
+### Handy References
+
+- [Python cheat sheet](https://www.pythoncheatsheet.org/)
+- [Hitchhikers guide to python](https://docs.python-guide.org)
+- [Pandas cheat sheet](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf)
+
+
+---
+
+### Overview of Basic Syntax
 - Variables
-- Data Types/Data Structures
+- Data Types
 - Operators
 - Control Flow
 - Functions
 - Classes
+- Collections
+- Comprehensions
+
+---
+### Variables
+
+- A name that refers to a value
+- No need to declare type
+  - Python is dynamically but strongly typed
+  - Recent versions have type hints
+- Can be reassigned
+
+---
+
+### Naming Conventions
+- Lowercase
+- Underscore to separate words
+- Descriptive
+- Avoid reserved words
+
+---
+
+### Variable Assignment
+```python
+x = 5
+y = "Hello"
+z = [1,2,3]
+y = 10 # replaced value
+```
+
+---
+
+### Data Types
+- int
+- float
+- str
+- bool `(True/False) # case sensitive`
+- None
+
+---
+
+### Collections
+- list
+- tuple
+- set
+- dict
+
+---
+
+### Type Conversion
+- int()
+- float()
+- str()
+- bool()
+- list()
+- tuple()
+- set()
+- dict()
+
+---
+### Some Useful Functions
+- print()
+- input()
+- type()
+- dir()
+- help()
+
+---
+
+### Arithmetic Operators
+| Precedence | Operator | Description |
+|------------|----------|-------------|
+| 1 | `()` | Parentheses |
+| 2 | `**` | Exponentiation |
+| 3 | `+x`, `-x`, `~x` | Unary plus, Unary minus, Bitwise NOT |
+| 4 | `*`, `/`, `//`, `%` | Multiplication, Division, Floor division, Modulus |
+| 5 | `+`, `-` | Addition, Subtraction |
+
+---
+
+### Bitwise Operators
+| Precedence | Operator | Description |
+|------------|----------|-------------|
+| 6 | `<<`, `>>` | Bitwise shift operators |
+| 7 | `&` | Bitwise AND |
+| 8 | `^` | Bitwise XOR |
+| 9 | `\|` | Bitwise OR |
+
+---
+
+### Comparison and Logical Operators
+| Precedence | Operator | Description |
+|------------|----------|-------------|
+| 10 | `==`, `!=`, `<`, `<=`, `>`, `>=` | Comparisons, Equality, Inequality |
+| 11 | `not` | Logical NOT |
+| 12 | `and` | Logical AND |
+| 13 | `or` | Logical OR |
+
+---
+
+### Code Blocks in Python
+- Some statements are followed by a code block
+- Such statements end with a colon `:`
+- Example: if, for, while, def, class, with, try, except, finally
+- Code blocks are defined by indentation
+- Indentation is typically 4 spaces
+
+---
+
+### Code Block Example
+```python
+
+def function():
+  # do something
+```
+
+---
+
+### Another Example
+```python
+
+if condition:
+  # do something
+  # do something else
+if another_condition:
+    # do something
+else:
+  # do something else
+  # do something else
+```
+
+---
+
+### Another Example
+```python
+
+if condition:
+  # do something
+  # do something else
+  if another_condition:
+    # do something
+  else:
+    # do something else
+else:
+  # do something else
+  # do something else
+```
+---
+
+### Another Example
+
+```python
+for i in range(10):
+  # do something
+  # do something else
+  if i % 2 == 0:
+    # do something
+  else:
+    # do something else
+if condition:
+  # do something
+else:
+  # do something else
+```
+
+---
+
+### Control Flow
+
+- Conditional Statements
+  - if, elif, else
+- loops
+  - for, while
+
+---
+
+### If Statements
+
+```python
+if condition:
+  # do something
+elif condition: # optional
+  # do something else
+else: # optional
+  # do something else
+```
+
+---
+
+### Conditions
+
+- Comparison operators
+  - `==`, `!=`, `<`, `<=`, `>`, `>=`
+- Logical operators
+  - `and`, `or`, `not`
+- Membership operators
+  - `in`, `not in`
+- Identity operators
+  - `is`, `is not`
+- Truthy and Falsy values
+
+---
+### Truthy and Falsy Values
+
+| Value Type | Truthy | Falsy |
+|------------|--------|-------|
+| Boolean | `True` | `False` |
+| Null |  | `None` |
+| Zero |  | `0`, `0.0`, `0j` |
+| Empty Collections |  | `""`, `()`, `[]`, `{}`, `set()`, `range(0)` |
+| Others | Any other value not listed in Falsy |  |
+
+---
+
+### loops
+
+
+---
+
+### Functions
+
+---
+
+### Classes
 
 ---
 
