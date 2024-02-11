@@ -40,10 +40,27 @@ slides:
 ---
 
 
-## PyIntro
-### Python Introduction for Researchers
+## PyIntro for Researchers
 
-Mohammad AlMarzouq
+### Mohammad AlMarzouq
+
+ISOM Department
+
+mo.almarzouq@ku.edu.kw
+
+https://malmarz.netlify.app/en/courses/pyintro/
+
+---
+
+### Submit Your Research Papers
+
+- Arab Journal of Administrative Sciences
+- https://journals.ku.edu.kw/ajas
+- [Call for papers](https://journals.ku.edu.kw/ajas/index.php/ajas/callforpapers)
+- [Call for reviewers](https://journals.ku.edu.kw/ajas/index.php/ajas/creviewer)
+- Quick turnaround time
+- Open access
+- Counts towards your promotion at KU
 
 ---
 
@@ -55,7 +72,7 @@ Mohammad AlMarzouq
 
 ---
 
-# Important Notes
+### Important Notes
 - We issue commands in Terminal and Python Console
 - Will identify commands with a `$` or `>>>` prompt
 - You should not type the prompt
@@ -575,6 +592,13 @@ else: # optional
 ---
 
 ### Classes
+
+---
+
+## Break
+- Resume in 15 minutes
+- Make sure pandas library is installed
+- See next few slides for instructions
 
 ---
 
