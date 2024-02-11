@@ -1053,12 +1053,14 @@ import statsmodels.api as sm
 import sklearn
 ```
 
+---
 
 ## Pandas Data Structures
 
 Introduction to Series and DataFrame
 Creating a Series and DataFrame
 Accessing and modifying data in Series and DataFrame
+---
 
 ## Loading Data
 
@@ -1066,11 +1068,15 @@ Loading data from CSV files
 Loading data from Excel files
 Loading data from SQL databases
 
+---
+
 ## Saving Data
 
 Saving data to CSV files
 Saving data to Excel files
 Saving data to SQL databases
+
+---
 
 ## Data Cleaning
 
@@ -1078,16 +1084,22 @@ Handling missing data
 Removing duplicates
 Renaming and replacing
 
+---
+
 ## Data Analysis
 
 Descriptive statistics
 Grouping and aggregating data
 Correlation and covariance
 
+---
+
 ## Data Visualization
 
 Plotting with Matplotlib
 Plotting with Seaborn
+
+---
 
 ## Reshaping Data
 
@@ -1095,11 +1107,15 @@ Pivoting data
 Melting data
 Concatenating and merging data
 
+---
+
 ## Statistical Analysis with Statsmodels
 
 Introduction to Statsmodels
 Simple linear regression
 Multiple linear regression
+
+---
 
 ## ML with Scikit-learn
 
