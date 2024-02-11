@@ -325,25 +325,6 @@ y = 10 # replaced value
 - dict : {"a":1, "b":2, "c":3}
 
 ---
-
-### Creating Collections
-```python
-x = []
-y = [1,2,3]
-z = [1,2,3 ,["foo", "bar"]]
-
-```
----
-### Creating Collections
-
-```python
-x = {}
-y = set()
-z = {"a":1, "b":2, "c":3}
-k = {1,2,3,4,4,5}
-
-```
-
 ### Type Conversion
 - int()
 - float()
@@ -353,6 +334,18 @@ k = {1,2,3,4,4,5}
 - tuple()
 - set()
 - dict()
+
+---
+
+### Type Conversion Example
+```python
+x = "5"
+y = int(x)
+z = float(x)
+```
+- Does x equal y?
+- Will throw an error if value cannot be converted
+
 ---
 
 
@@ -387,13 +380,397 @@ k = {1,2,3,4,4,5}
 
 ---
 
+### Creating Collections
+```python
+x = []
+y = [1,2,3]
+z = [1,2,3 ,["foo", "bar"]]
+
+```
+---
+### Creating Collections
+
+```python
+x = {}
+y = set()
+z = {"a":1, "b":2, "c":3}
+k = {1,2,3,4,4,5}
+
+```
+
+### Accessing Collections
+- Indexing
+- Slicing
+- Iterating
+
+---
+
+### Indexing
+- Used to fetch a single element
+- 0 based
+- Negative indexing
+- Out of range indexing
+
+---
+
+### Example
+```python
+x = [1,2,3,4,5]
+print(x[0])
+print(x[-1])
+print(x[5])
+```
+
+---
+
+### Slicing
+- Used to fetch a range of elements
+- Start, Stop, Step
+- Default values
+- Negative slicing
+
+---
+
+### Example
+```python
+x = [1,2,3,4,5]
+print(x[0:3])
+print(x[:3])
+print(x[3:])
+print(x[::2])
+print(x[::-1])
+```
+
+---
+
+### Iterating
+- for loop
+- while loop
+- list comprehension
+- generator expression
+
+---
+
+### For Example
+```python
+x = [1,2,3,4,5]
+for i in x:
+  print(i) # this is a code block
+```
+
+---
+### Code Blocks in Python
+- Some statements are followed by a code block
+- Such statements end with a colon `:`
+- Example: if, for, while, def, class, with, try, except, finally
+- Code blocks are defined by indentation
+- Indentation is typically 4 spaces
+- Will get back to this later
+
+---
+
+### Code Block Example
+```python
+
+def function():
+  # do something
+```
+
+---
+
+### Another Example
+```python
+
+if condition:
+  # do something
+  # do something else
+if another_condition:
+    # do something
+else:
+  # do something else
+  # do something else
+```
+
+
+---
+
+### Another Example
+```python
+
+if condition:
+  # do something
+  # do something else
+  if another_condition:
+    # do something
+  else:
+    # do something else
+else:
+  # do something else
+  # do something else
+```
+---
+
+### Another Example
+
+```python
+for i in range(10):
+  # do something
+  # do something else
+  if i % 2 == 0:
+    # do something
+  else:
+    # do something else
+if condition:
+  # do something
+else:
+  # do something else
+```
+
+
+---
+
+### Back to Our For Example
+```python
+x = [1,2,3,4,5]
+for i in x:
+  print(i) 
+```
+---
+
+### Another For Example
+```python
+x = [1,2,3,4,5]
+for i in range(len(x)):
+  print(x[i])
+```
+
+---
+
+### While Example
+```python
+x = [1,2,3,4,5]
+i = 0
+while i < len(x):
+  print(x[i])
+  i += 1
+```
+
+---
+
+### Filtering Using For Loops
+```python
+x = [1,2,3,4,5]
+y = []
+for i in x:
+  if i % 2 == 0:
+    y.append(i)
+print(y)
+```
+
+---
+
+### List Comprehension
+```python
+x = [1,2,3,4,5]
+y = [i for i in x if i % 2 == 0]
+print(y)
+```
+
+---
+
+### Comprehensions
+
+- Exist for lists, sets, and dictionaries
+- Used to create new collections from existing ones
+- Can be used to filter, transform, or combine collections
+- Can be nested
+- More efficient than loops
+
+---
+
+### Generator Expressions
+- Similar to list comprehensions
+- Use parentheses instead of square brackets
+- Lazy evaluation
+- More memory efficient
+- Can be used to create infinite sequences
+- Many functions in Python accept or return generator expressions
+- Convert to list using `list()` to evaluate
+- Otherwise, use in a for loop
+---
+
+
+### Control Flow
+
+- Conditional Statements
+  - if, elif, else
+- loops
+  - for, while
+
+---
+
+### If Statements
+
+```python
+if condition:
+  # do something
+elif condition: # optional
+  # do something else
+else: # optional
+  # do something else
+```
+
+---
+
+### Conditions
+
+- Comparison operators
+  - `==`, `!=`, `<`, `<=`, `>`, `>=`
+- Logical operators
+  - `and`, `or`, `not`
+- Membership operators
+  - `in`, `not in`
+- Identity operators
+  - `is`, `is not`
+- Truthy and Falsy values
+
+---
+### Truthy and Falsy Values
+
+| Value Type | Truthy | Falsy |
+|------------|--------|-------|
+| Boolean | `True` | `False` |
+| Null |  | `None` |
+| Zero |  | `0`, `0.0`, `0j` |
+| Empty Collections |  | `""`, `()`, `[]`, `{}`, `set()`, `range(0)` |
+| Others | Any other value not listed in Falsy |  |
+
+---
+
+### Functions
+
+- A block of code that only runs when it is called
+- Can take arguments
+  - Mandatory or optional
+  - Positional or keyword
+- Can return values
+- Great for scoping variables
+  - Avoids global variables
+  - Makes code more modular
+---
+
+### Void Function Example
+```python
+def my_function():
+  print("Hello from a function")
+```
+- This is just a definition, the function is not executed
+- To  execute:
+
+```python
+my_function()
+```
+
+---
+
+### Function with Arguments
+```python
+def my_function(name):
+  print("Hello " + name)
+```
+
+---
+
+### Function with Return Value
+```python
+def my_function(x):
+  return x**2
+
+# execute
+print(my_function(2))
+```
+
+---
+
+### Function with Default Argument
+```python
+def my_function(x=2):
+  return x**2
+
+# execute
+print(my_function()) # Where is the argument?
+```
+
+---
+
+### Function with Keyword Arguments
+```python
+def my_function(x=2, y=3):
+  return x**y
+
+# execute
+print(my_function(y=2, x=3))
+# or
+print(my_function(x=3, y=2))
+```
+
+### Other Ways to Call The Functions
+
+```python
+print(my_function(3, 2)) # positional
+# or
+print(my_function(x=3)) # keyword
+# or
+print(my_function(y=3))
+# or
+print(my_function())
+```
+What are the arguments?
+---
+
+### Function with Variable Arguments
+```python
+def my_function(*args):
+  return sum(args)
+
+# execute
+print(my_function(1,2,3,4,5))
+print(my_function(1,2,3))
+
+```
+
+---
+
+### Function with Variable Keyword Arguments
+```python
+def my_function(**kwargs):
+  return kwargs
+
+# execute
+print(my_function(a=1, b=2, c=3))
+print(my_function(x=1, y=2))
+
+```
+
+---  
+
+### Things to Note
+- `args` and `kwargs` are just names
+- `args` is a tuple
+- `kwargs` is a dictionary
+- `args` and `kwargs` are optional and must be at the end
+  - `args` (positional) before `kwargs` (keyword)
+- `args` and `kwargs` can be used together
+
+---
 
 ### Variables Vs. Functions
 
 - Variables store values
 - Functions store instructions
 - Both are considered variables that you can refer to
-- Use parantheses to execute variables containing functions
+- Use parentheses to execute variables containing functions
+
 ---
 ### What's The Output?
 ```python
@@ -467,131 +844,47 @@ def f(x):
 squared = list(map(f, num_list))
 ```
 
-
-### Code Blocks in Python
-- Some statements are followed by a code block
-- Such statements end with a colon `:`
-- Example: if, for, while, def, class, with, try, except, finally
-- Code blocks are defined by indentation
-- Indentation is typically 4 spaces
-
----
-
-### Code Block Example
-```python
-
-def function():
-  # do something
-```
-
----
-
-### Another Example
-```python
-
-if condition:
-  # do something
-  # do something else
-if another_condition:
-    # do something
-else:
-  # do something else
-  # do something else
-```
-
----
-
-### Another Example
-```python
-
-if condition:
-  # do something
-  # do something else
-  if another_condition:
-    # do something
-  else:
-    # do something else
-else:
-  # do something else
-  # do something else
-```
----
-
-### Another Example
-
-```python
-for i in range(10):
-  # do something
-  # do something else
-  if i % 2 == 0:
-    # do something
-  else:
-    # do something else
-if condition:
-  # do something
-else:
-  # do something else
-```
-
----
-
-### Control Flow
-
-- Conditional Statements
-  - if, elif, else
-- loops
-  - for, while
-
----
-
-### If Statements
-
-```python
-if condition:
-  # do something
-elif condition: # optional
-  # do something else
-else: # optional
-  # do something else
-```
-
----
-
-### Conditions
-
-- Comparison operators
-  - `==`, `!=`, `<`, `<=`, `>`, `>=`
-- Logical operators
-  - `and`, `or`, `not`
-- Membership operators
-  - `in`, `not in`
-- Identity operators
-  - `is`, `is not`
-- Truthy and Falsy values
-
----
-### Truthy and Falsy Values
-
-| Value Type | Truthy | Falsy |
-|------------|--------|-------|
-| Boolean | `True` | `False` |
-| Null |  | `None` |
-| Zero |  | `0`, `0.0`, `0j` |
-| Empty Collections |  | `""`, `()`, `[]`, `{}`, `set()`, `range(0)` |
-| Others | Any other value not listed in Falsy |  |
-
----
-
-### loops
-
-
----
-
-### Functions
-
 ---
 
 ### Classes
+
+- A blueprint for creating objects
+- Objects have properties and methods
+- Will not cover in this session
+  - Requires we cover OOP
+- Instead, we will focus on using classes
+  - Many libraries provide classes
+
+---
+
+### Using Classes
+
+- You must create an instance of the class
+- You can then use the methods and properties from the instance
+- You can create multiple instances of the same class
+- Each instance will have its own properties
+  - Methods will work on the properties of the instance
+  - Another way to scope variables
+
+---
+
+### Example of Using Classes
+
+```python
+import pandas as pd
+df = pd.DataFrame({"col1": [1,2,3]}) # instance
+df2 = pd.DataFrame({"A": [4,5,6]}, {"B": [7,8,9]}) # another instance
+
+# calling a method
+df.head()
+df2.head()
+
+# accessing a property
+df.columns
+df2.columns
+```
+
+
 
 ---
 
@@ -602,9 +895,79 @@ else: # optional
 
 ---
 
-## Installing Libraries
+### Python Libraries
+- Built-in
+  - Comes with Python
+- Third-party
+  - Installed using pip
 
 ---
+
+### Using Libraries
+- Import the library
+- Read documentation to understand how to use the library
+  - You can peak into libraries using `dir()` and `help()`
+- Use the library
+
+---
+
+### Example of Using Libraries
+```python
+import math #simple import
+
+# calling a library function
+math.sqrt(4)
+```
+
+Always prefix the function with the library name
+
+---
+
+### Another Example
+
+```python
+
+from math import sqrt # import a specific function
+
+# calling the function
+sqrt(4)
+```
+
+---
+
+### Bad Example (Avoid This)
+
+```python
+from math import * # import everything
+
+# calling the function
+sqrt(4)
+```
+Risk of overwriting functions
+
+---
+
+### Example of Aliasing Libraries
+
+```python
+import pandas as pd # aliasing
+
+# calling a function/class
+pd.DataFrame()
+```
+Conventional for most data science libraries
+
+---
+
+## Installing Libraries
+
+```bash
+$ pip install pandas
+```
+**Remember**: This is a command line command
+
+---
+
 
 ## Important Libraries
 
@@ -634,6 +997,10 @@ pymc
 dowhy
 econml
 GROBID
+
+
+---
+
 
 
 ---
