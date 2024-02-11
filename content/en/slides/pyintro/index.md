@@ -12,7 +12,7 @@ slides:
   #   Light style: github. Dark style: dracula (default).
   #   Available highlight themes listed in: https://highlightjs.org/static/demo/
   #   Use lower case names and replace space with hyphen '-'
-  highlight_style: dracula
+  highlight_style: obsidian
 
   diagram: true
   diagram_options:
@@ -76,6 +76,8 @@ https://malmarz.netlify.app/en/courses/pyintro/
 - We issue commands in Terminal and Python Console
 - Will identify commands with a `$` or `>>>` prompt
 - You should not type the prompt
+- If no prompt, then its python code
+  - Use in python prompt or editor
 
 ---
 
@@ -306,6 +308,8 @@ y = 10 # replaced value
 - type()
 - dir()
 - help()
+- In notebooks, use `?` or `??` after a function or variable
+  - ?? will show the source code
 
 ---
 
@@ -387,7 +391,9 @@ y = [1,2,3]
 z = [1,2,3 ,["foo", "bar"]]
 
 ```
+
 ---
+
 ### Creating Collections
 
 ```python
@@ -397,6 +403,8 @@ z = {"a":1, "b":2, "c":3}
 k = {1,2,3,4,4,5}
 
 ```
+
+---
 
 ### Accessing Collections
 - Indexing
@@ -432,6 +440,7 @@ print(x[5])
 ---
 
 ### Example
+
 ```python
 x = [1,2,3,4,5]
 print(x[0:3])
@@ -714,6 +723,9 @@ print(my_function(y=2, x=3))
 print(my_function(x=3, y=2))
 ```
 
+---
+
+
 ### Other Ways to Call The Functions
 
 ```python
@@ -726,6 +738,7 @@ print(my_function(y=3))
 print(my_function())
 ```
 What are the arguments?
+
 ---
 
 ### Function with Variable Arguments
@@ -884,8 +897,6 @@ df.columns
 df2.columns
 ```
 
-
-
 ---
 
 ## Break
@@ -911,12 +922,17 @@ df2.columns
 
 ---
 
+
 ### Example of Using Libraries
 ```python
 import math #simple import
 
 # calling a library function
 math.sqrt(4)
+
+# Discovering the library
+dir(math)
+help(math.sqrt)
 ```
 
 Always prefix the function with the library name
@@ -964,48 +980,88 @@ Conventional for most data science libraries
 ```bash
 $ pip install pandas
 ```
-**Remember**: This is a command line command
+**Remember**: This is a shell/terminal command
 
 ---
 
 
-## Important Libraries
+### Important Statistical Libraries and Frameworks
 
-https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf
-
-numpy
-scipy
-sklearn
-matplotlib
-seaborn
-plotly
-altair
-statsmodels
-pandas
-networkx
-pydot
-tensorflow
-pytorch
-keras
-nltk
-spacy
-gensim
-tomotopy
-scrapy
-beautifulsoup
-pymc
-dowhy
-econml
-GROBID
-
+- pandas
+- numpy
+- scipy
+- sklearn
+- statsmodels
 
 ---
 
+## Causal Inference and Bayesian Analysis Libraries
 
+- pymc
+- dowhy
+- econml
+- causalnex
+
+---
+
+### Visualization Libraries
+
+- matplotlib
+- seaborn
+- plotly
+- altair
+
+---
+
+### Network Analysis Libraries
+
+- networkx
+- networkit
+- graph-tool
+- python-igraph
+- pydot
+
+---
+
+### Deep Learning Libraries
+
+- tensorflow
+- pytorch
+- keras
+- jax
+
+---
+
+### Natural Language Processing Libraries
+
+- nltk
+- spacy
+- gensim
+- tomotopy
+
+---
+
+### Useful Web/PDF Scraping Libraries
+
+- scrapy
+- beautifulsoup
+- GROBID
 
 ---
 
 ## Introduction to Pandas
+
+---
+
+### Notes
+
+- Recommended to use Jupyter Notebook
+  - VSCode has a notebook mode
+- You can output content of a cell by just typing the variable name
+  - You can also use the `print()` function
+  - Without print you can only see the last line of the cell
+  - With print you can see multiple lines
+- Copilot and ChatGPT can be very useful
 
 ---
 
@@ -1014,17 +1070,14 @@ GROBID
 - Built on top of the Python programming language
 - Offers data structures and operations for manipulating numerical tables and time series
 - Integrates well with other libraries in Python ecosystem
-
----
-
-## Installation and Setup
+- Name derived from **Pan**el **Da**ta
 
 ---
 
 ### How to install Pandas
 
 ```bash
-pip install pandas
+$ pip install pandas
 ```
 Anaconda python comes with Pandas and other libraries pre-installed.
 
@@ -1045,6 +1098,7 @@ Setup and configuration typically done at top of script or notebook
 ### Typical Research Setup
 
 ```python
+# Assumed for all examples
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -1060,6 +1114,198 @@ import sklearn
 Introduction to Series and DataFrame
 Creating a Series and DataFrame
 Accessing and modifying data in Series and DataFrame
+
+---
+
+### Series
+
+- One-dimensional labeled array
+- Can hold any data type
+- Can be created from a list, dictionary, or scalar value
+- A combination of a list and a dictionary 
+  - has both numeric and named indices
+
+---
+
+### Creating a Series
+
+```python
+
+# from a list
+s = pd.Series([1, 2, 3, 4, 5])
+print(s)
+
+# from a dictionary
+d = {'a': 1, 'b': 2, 'c': 3}
+s = pd.Series(d)
+print(s)
+
+# from a scalar value
+s = pd.Series(5, index=[0, 1, 2, 3, 4])
+print(s)
+```
+
+---
+
+### Accessing and Modifying Data in Series
+
+```python
+
+s = pd.Series([1, 2, 3, 4, 5], index=['a', 'b', 'c', 'd', 'e'])
+
+# Accessing data
+print(s['a'])
+print(s[0])
+
+# Modifying data
+s['a'] = 6
+print(s)
+```
+
+---
+
+### DataFrame
+
+- Two-dimensional labeled data structure
+  - Like a table or spreadsheet
+- Can hold any data type
+- Can be created from a dictionary, list of dictionaries, or a list of lists
+- Each column is a Series of equal length
+
+---
+
+### Creating a DataFrame
+
+```python
+
+# from a dictionary
+d = {'col1': [1, 2, 3], 'col2': [4, 5, 6]}
+df = pd.DataFrame(d)
+print(df)
+
+# from a list of dictionaries
+data = [{'a': 1, 'b': 2}, {'a': 3, 'b': 4, 'c': 5}]
+df = pd.DataFrame(data)
+print(df)
+
+
+# from a list of lists
+data = [[1, 2, 3], [4, 5, 6]]
+df = pd.DataFrame(data, columns=['a', 'b', 'c'])
+print(df)
+```
+
+---
+
+### Accessing Data in DataFrame
+
+- Can feel confusing at first
+   - You have multiple options
+- Select columns: `[] and .`
+- Select rows: `loc, iloc, and []`
+- Select rows and columns: `loc, iloc, and []`
+- Select a cell: `at and iat`
+- There is also query for more complex selection of rows
+
+---
+
+### DataFrames Have an Index
+
+- Used to identify rows
+- Can be numeric or named
+- Can be set to a column where values become the index
+- You can also access rows by number
+- Indecis and columns can be hierarchical
+  - We will not cover this
+
+---
+
+### Selecting Columns
+
+```python
+df = pd.DataFrame({'a': [1, 2, 3], 'b': [4, 5, 6], 'c': [7, 8, 9]})
+# single column
+print(df['a'])
+
+# or
+print(df.a)
+
+# multiple columns
+print(df[['b', 'a']])
+
+```
+
+
+---
+
+
+
+### Selecting Rows
+
+```python
+df = pd.DataFrame({'a': [1, 2, 3], 'b': [4, 5, 6], 'c': [7, 8, 9]}, index=['x', 'y', 'z'])
+# single row by number
+print(df.loc[0])
+
+# or by index
+print(df.iloc['x']) 
+
+# multiple rows (slices)
+print(df.iloc[0:1])
+
+# or by index
+print(df.loc['x':'y'])  # maintains order
+```
+
+
+--
+
+### Selecting Rows and Columns
+
+```python
+df = pd.DataFrame({'a': [1, 2, 3], 'b': [4, 5, 6], 'c': [7, 8, 9]}, index=['x', 'y', 'z'])
+# single cell
+print(df.at['x', 'a'])
+
+# or
+print(df.iat[0, 0])
+
+# multiple cells ()
+print(df.loc['x':'y', 'a':'b'])
+
+# or
+print(df.iloc[0:2, 0:2])
+
+```
+
+### Notice
+
+- loc and iloc, first argument is for rows and second is for columns
+- You can select columns with loc and iloc:
+
+```python
+print(df.loc[:, 'a':'b'])
+print(df.iloc[:, 0:2])
+```
+
+---
+
+### Conditional Selection of Rows
+
+```python
+df = pd.DataFrame({'a': [1, 2, 3], 'b': [4, 5, 6], 'c': [7, 8, 9]}, index=['x', 'y', 'z'])
+# single condition
+print(df[df['a'] > 1])
+
+# multiple conditions
+print(df[(df['a'] > 1) & (df['b'] < 6)])
+
+# or using query
+
+print(df.query('a > 1 and b < 6'))
+
+```
+
 ---
 
 ## Loading Data
