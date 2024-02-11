@@ -282,25 +282,50 @@ y = "Hello"
 z = [1,2,3]
 y = 10 # replaced value
 ```
+---
+### Some Useful Functions
+- print()
+- input()
+- type()
+- dir()
+- help()
 
 ---
 
 ### Data Types
-- int
-- float
-- str
-- bool `(True/False) # case sensitive`
-- None
+- int : 1, 2, 3
+- float : 1.0, 2.0, 3.0
+- str : "Hello", 'World', "1", "2"
+- bool : True, False
+- None 
 
 ---
 
 ### Collections
-- list
-- tuple
-- set
-- dict
+- list : [1,2,3]
+- tuple : (1,2,3)
+- set : {1,2,3}
+- dict : {"a":1, "b":2, "c":3}
 
 ---
+
+### Creating Collections
+```python
+x = []
+y = [1,2,3]
+z = [1,2,3 ,["foo", "bar"]]
+
+```
+---
+### Creating Collections
+
+```python
+x = {}
+y = set()
+z = {"a":1, "b":2, "c":3}
+k = {1,2,3,4,4,5}
+
+```
 
 ### Type Conversion
 - int()
@@ -311,16 +336,8 @@ y = 10 # replaced value
 - tuple()
 - set()
 - dict()
-
 ---
-### Some Useful Functions
-- print()
-- input()
-- type()
-- dir()
-- help()
 
----
 
 ### Arithmetic Operators
 | Precedence | Operator | Description |
@@ -352,6 +369,87 @@ y = 10 # replaced value
 | 13 | `or` | Logical OR |
 
 ---
+
+
+### Variables Vs. Functions
+
+- Variables store values
+- Functions store instructions
+- Both are considered variables that you can refer to
+- Use parantheses to execute variables containing functions
+---
+### What's The Output?
+```python
+print(x)
+print("x")
+print(input)
+print(input())
+```
+---
+### Challenge
+
+- Rename print to z
+- Redefine print to be input
+
+---
+
+### Solution
+
+```python
+z = print
+z("hello world")
+print("Hello world")
+print = input
+print("Hello world")
+```
+---
+
+### Python Can Do Tricks
+- But why is this useful?
+- It means you can 
+  - Pass functions as arguments to other functions
+  - You can return functions from other functions
+  - You can store functions in data structures
+  - You can create functions on the fly
+  - You can create functions that create functions
+- Code flexibility
+---
+
+### Results In Some Very Useful Features
+- Lambda Functions
+- Decorators
+---
+
+### Example Lambda Function
+
+```python
+f = lambda x: x**2
+print(f(2))
+```
+---
+
+
+### More Useful Example
+
+```python
+num_list = [1,2,3,4,5]
+
+# in just one line
+squared = list(map(lambda x: x**2, num_list))
+```
+----
+
+### Alt Solution
+```Python
+num_list = [1,2,3,4,5]
+
+# Three lines of code
+def f(x):
+  return x**2
+
+squared = list(map(f, num_list))
+```
+
 
 ### Code Blocks in Python
 - Some statements are followed by a code block
