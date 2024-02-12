@@ -1308,43 +1308,540 @@ print(df.query('a > 1 and b < 6'))
 
 ---
 
-## Loading Data
+### Loading Data
 
-Loading data from CSV files
-Loading data from Excel files
-Loading data from SQL databases
+- You can read data from a file or URL
+- Pandas supports many file formats
+  - CSV, Excel, SQL, JSON, HTML, Stata, SAS, Parquet, Feather, and more
+- Use `read_*` functions
+- You might need to install additional libraries for some formats
+---
+
+### Loading Data Example
+
+```python
+df = pd.read_csv('file.csv')
+df = pd.read_excel('file.xlsx')
+df = pd.read_sql('SELECT * FROM table', connection)
+df = pd.read_json('file.json')
+df = pd.read_html('http://example.com/tables.html')
+df = pd.read_stata('file.dta')
+df = pd.read_sas('file.sas7bdat')
+df = pd.read_parquet('file.parquet')  # requires pyarrow 
+```
 
 ---
 
-## Saving Data
+### Exercise
 
-Saving data to CSV files
-Saving data to Excel files
-Saving data to SQL databases
-
----
-
-## Data Cleaning
-
-Handling missing data
-Removing duplicates
-Renaming and replacing
+- Visit [this page](https://www.kaggle.com/datasets/)
+- Download any dataset and extract data file
+  - Make sure data file is in the same directory as your notebook
+- Load the dataset into a DataFrame
+  - Convention is to prefix it with `df` for easy reference
+  - For example, `df_data = pd.read_csv('file.csv')`
+- Display the dataframe
 
 ---
 
-## Data Analysis
+### Data Discovery
 
-Descriptive statistics
-Grouping and aggregating data
-Correlation and covariance
+- Displaying the first few rows
+- Displaying the last few rows
+- Displaying the shape
+- Displaying the columns
+- Displaying the data types
+- Displaying the summary statistics
+- Displaying the unique values
+- Displaying the value counts
 
 ---
 
-## Data Visualization
+### Data Set to Use in Analysis
 
-Plotting with Matplotlib
-Plotting with Seaborn
+- Load Gapminder dataset from URL
 
+```python
+url = "https://raw.githubusercontent.com/resbaz/r-novice-gapminder-files/master/data/gapminder-FiveYearData.csv"
+df = pd.read_csv(url)
+
+```
+
+---
+
+### Data Discovery Example
+
+```python
+
+# Displaying the first few rows
+print(df.head())
+
+# Displaying the last few rows
+print(df.tail())
+
+# Displaying the shape
+print(df.shape)
+
+# Displaying the columns
+print(df.columns)
+
+```
+---
+
+### Data Discovery Example
+
+```python
+# Displaying the data types
+print(df.dtypes)
+
+# Displaying the summary statistics
+print(df.describe())
+
+# Displaying the unique values
+print(df['country'].unique())
+
+# Displaying the value counts
+print(df['country'].value_counts())
+
+```
+
+---
+
+### Saving Data
+
+- You can save data to a file or database
+- Pandas supports many file formats
+  - CSV, Excel, SQL, JSON, HTML, Stata, SAS, Parquet, Feather, and more
+- Use `to_*` functions
+- You might need to install additional libraries for some formats
+---
+
+### Saving Data Example
+
+```python
+df.to_csv('file.csv')
+df.to_excel('file.xlsx')
+df.to_sql('table', connection)
+df.to_json('file.json')
+df.to_html('file.html')
+df.to_stata('file.dta')
+df.to_sas('file.sas7bdat')
+df.to_parquet('file.parquet')  # requires pyarrow 
+```
+
+### Things to Note About Saving and Loading Data
+
+- You can specify the file path
+- For arabic text, you might have to specify the encoding
+  - Likely to be `utf-8`
+- You can store or drop the index
+- You can specify data types for each column
+  - Either during or after loading
+  - Use dtype argument in `read_*` functions
+  - Use `astype` method in DataFrame
+- You can specify date and float formats
+
+---
+
+### Data Cleaning
+
+- Handling missing data
+- Removing duplicates
+- Renaming and replacing
+
+---
+
+### Missing Data Example
+
+```python
+df = pd.DataFrame({'a': [1, 2, np.nan], 'b': [4, np.nan, 6], 'c': [np.nan, 8, 9]})
+print(df)
+
+# drop rows with missing data
+print(df.dropna())
+
+# drop columns with missing data
+print(df.dropna(axis=1))
+
+# fill missing data
+print(df.fillna(0))
+```
+
+---
+
+### Removing Duplicates Example
+
+```python
+
+df = pd.DataFrame({'a': [1, 2, 2, 3], 'b': [4, 5, 5, 6], 'c': [7, 8, 8, 9]})
+print(df)
+
+# drop duplicates
+print(df.drop_duplicates())
+
+# drop duplicates based on a column
+print(df.drop_duplicates(subset=['a']))
+
+# display duplicates
+print(df[df.duplicated()])
+
+# display duplicates based on a column
+print(df[df.duplicated(subset=['a'])])
+
+# Try to print df after each operation
+# What do you notice?
+```
+
+---
+
+### DataFrame Immutability
+
+- Operations on a DataFrame do not change the original DataFrame
+- You must assign the result to a new variable
+- You can use the `inplace` argument to change the original DataFrame
+  - Not recommended
+  - Can be confusing
+  - Can be error prone
+  - Can be slow
+- Try dropping duplicates with and without `inplace`
+---
+
+### Solution
+  
+  ```python
+  df = pd.DataFrame({'a': [1, 2, 2, 3], 'b': [4, 5, 5, 6], 'c': [7, 8, 8, 9]})
+  print(df)
+
+  # drop duplicates, use this with any operation that changes the dataframe
+  df = df.drop_duplicates()
+  print(df)
+
+  # drop duplicates using inplace
+  df.drop_duplicates(inplace=True)
+  print(df)
+  ```
+
+---
+
+### Renaming and Replacing Example
+
+```python
+
+df = pd.DataFrame({'a': [1, 2, 3], 'b': [4, 5, 6], 'c': [7, 8, 9]})
+print(df)
+
+# rename columns
+df_renamed = df.rename(columns={'a': 'A', 'b': 'B'})
+print(df_renamed)
+
+# alternatively
+df.columns = ['A', 'B', 'C']
+print(df)
+
+# replace values
+df_replaced = df_renamed.replace(1, 100)
+print(df_replaced)
+```
+
+---
+
+### Data Analysis
+
+- Descriptive statistics
+- Grouping and aggregating data
+- Correlation and covariance
+
+---
+
+### Descriptive Statistics Example
+
+```python
+print(df.describe())
+
+# or
+print(df['gdpPercap'].mean())
+print(df['gdpPercap'].median())
+print(df['gdpPercap'].std())
+print(df['gdpPercap'].min())
+print(df['gdpPercap'].max())
+print(df['gdpPercap'].quantile(0.25))
+print(df['gdpPercap'].quantile(0.75))
+```
+
+---
+
+### Grouping and Aggregating Data Example
+
+```python
+# use gapminder df, it is in df
+print(df.groupby('country')['gdpPercap'].mean())
+
+# or
+print(df.groupby('country')['gdpPercap'].agg(['mean', 'median', 'std', 'min', 'max', 'count']))
+
+# or 
+print(df.groupby('country').agg(
+  {
+    'gdpPercap': ['mean', 'median', 'std', 'min', 'max', 'count'], 
+    'lifeExp': ['mean', 'median', 'std', 'min', 'max', 'count'],
+    }
+  ))
+
+
+```
+
+### Aggregating Without Reshaping DataFrames
+
+- You can use the `transform` method to aggregate without reshaping the DataFrame
+
+```python
+df['gdpPercap_mean'] = df.groupby('country')['gdpPercap'].transform('mean')
+print(df)
+```
+
+- Notice how we assign the result to a new column
+---
+
+### Correlation and Covariance Example
+
+- The following will give an error, can you fix it?
+
+```python
+print(df.corr())
+print(df.cov())
+```
+
+---
+
+### Solution
+
+```python
+
+# You need to select the numeric columns
+corr_matrix = df[['year', 'pop', 'lifeExp', 'gdpPercap']].corr()
+cov_matrix = df[['year', 'pop', 'lifeExp', 'gdpPercap']].cov()
+
+# To correlate specific columns
+df['lifeExp'].corr(df['gdpPercap'])
+df['lifeExp'].cov(df['gdpPercap'])
+
+```
+
+---
+
+### Data Visualization
+
+- Pandas has some built-in plotting capabilities
+- You can also use matplotlib and seaborn for more advanced plots
+- You can also use plotly for interactive plots
+- You can also use altair for declarative plots (similar to ggplot2 in R)
+- We will cover only matplotlib and seaborn
+
+---
+
+### Pandas Plotting Example
+
+```python
+# just choose the column and call the plot method
+df['gdpPercap'].plot()
+
+# You can choose the kind of plot
+df['gdpPercap'].plot(kind='hist')
+
+# You can also use the plot method of the DataFrame
+df.plot(x='year', y='gdpPercap', kind='scatter')
+
+```
+
+---
+
+### Plot Kinds Supported by Pandas
+
+- line
+- bar
+- barh
+- hist
+- box
+- kde
+- density
+- area
+- pie
+- scatter
+- hexbin
+- Each has its own restrictions and requirements
+---
+
+### Commulative Sum Example
+
+```python
+df['gdpPercap'].cumsum().plot()
+```
+
+---
+
+### Matplotlib
+
+- The most popular plotting library for Python
+- Provides a MATLAB-like interface
+- Can be used to create complex, publication-quality plots
+
+---
+
+### Steps To Create a Plot
+
+1. Create a figure
+2. Create one or more subplots
+3. Plot data on the subplots
+4. Customize the plot
+5. Save the plot
+6. Show the plot
+
+---
+
+### Example
+
+```python
+import matplotlib.pyplot as plt
+
+# Create a figure
+fig = plt.figure()
+
+# Create a subplot 
+ax = fig.add_subplot(111)
+# this creates a 1x1 grid of subplots and returns the first one
+# alternatively, you can use fig.add_subplot(1, 1, 1)
+
+# Plot data on the subplot
+ax.plot([1, 2, 3, 4], [10, 20, 25, 30])
+# x-axis is the first list and y-axis is the second list
+# replace lists with pandas series or numpy arrays
+
+# Customize the plot (optional)
+ax.set_xlabel('x-axis')
+ax.set_ylabel('y-axis')
+ax.set_title('Title')
+
+# Save the plot (optional)
+plt.savefig('plot.png')
+
+# Show the plot
+plt.show()
+```
+
+---
+
+### 4 Subplot Matplotlib Example
+
+```python
+fig, axs = plt.subplots(2, 2)
+
+axs[0, 0].plot(df['year'], df['gdpPercap'])
+axs[0, 0].set_title('GDP Per Capita')
+
+axs[0, 1].plot(df['year'], df['lifeExp'])
+axs[0, 1].set_title('Life Expectancy')
+
+axs[1, 0].plot(df['year'], df['pop'])
+axs[1, 0].set_title('Population')
+
+axs[1, 1].plot(df['year'], df['gdpPercap'] * df['pop'])
+axs[1, 1].set_title('GDP')
+
+plt.show()
+```
+
+---
+
+### Problem
+
+Plots were a mess, can you fix them?
+
+---
+
+### Solution
+
+- Select a subset of the data for a specific country
+
+```python
+
+df_kenya = df[df['country'] == 'Kenya']
+# or use query
+df_kenya = df.query('country == "Kenya"')
+
+# replace df with df_kenya in the previous example
+```
+
+---
+
+### Seaborn
+
+- Built on top of matplotlib
+- Provides a high-level interface for drawing attractive and informative statistical graphics
+- Provides a variety of plot types, color palettes, and themes
+- You might find it easier and defaults more appealing than matplotlib
+- Importing seaborn will also set the matplotlib and pandas defaults
+- Grouping is easier
+---
+
+### Seaborn Example
+
+```python
+import seaborn as sns
+
+# Code is similar to matplotlib
+# but you can also use the sns function
+sns.lineplot(x='year', y='gdpPercap', data=df)
+``` 
+
+---
+
+### Seaborn Plot Types
+
+- Has many types to list here
+- Discover them from documentation at:
+  - [Seaborn](https://seaborn.pydata.org/)
+
+---
+
+### Seaborn Example
+
+```python
+# scatter plot grouped by continent
+sns.scatterplot(x='year', y='gdpPercap', data=df, hue='continent')
+
+# box plot grouped by continent
+sns.boxplot(x='continent', y='gdpPercap', data=df)
+
+# violin plot grouped by continent
+sns.violinplot(x='continent', y='gdpPercap', data=df)
+
+# pair plot
+sns.pairplot(df[['gdpPercap', 'lifeExp', 'pop']])
+
+# heatmap
+sns.heatmap(df[['year', 'pop', 'lifeExp', 'gdpPercap']].corr())
+
+# count plot
+sns.countplot(x='continent', data=df)
+
+```
+
+---
+
+### Seaborn Themes
+
+- Seaborn is highly customizable
+- You can set the theme, color palette, and context
+- Redraw the plot after setting the theme
+
+```python
+sns.set_theme(style='whitegrid') # alternatives include 'darkgrid', 'white', 
+                                 # 'dark', 'ticks'
+sns.set_palette('pastel') # alternatives include 'deep', 'muted', 
+                          # 'bright', 'dark', 'colorblind'
+sns.set_context('talk') # this sets the font size for talk
+                        # you can also use 'paper', 'notebook', 'poster'
+```
 ---
 
 ## Reshaping Data
@@ -1354,6 +1851,59 @@ Melting data
 Concatenating and merging data
 
 ---
+
+### Pivoting Data
+
+- Reshaping data from long to wide format
+- Can be used to create a pivot table, cross-tabulation, or contingency table
+
+---
+
+### Pivoting Data Example
+
+```python
+
+df = pd.DataFrame({'A': ['foo', 'foo', 'foo', 'bar', 'bar', 'bar'],
+                   'B': ['one', 'one', 'two', 'two', 'one', 'one'],
+                   'C': ['small', 'large', 'large', 'small', 'small', 'large'],
+                   'D': [1, 2, 2, 3, 3, 4]})
+print(df)
+
+# pivot table
+print(df.pivot_table(index='A', columns='B', values='D'))
+
+# More arguments
+print(df.pivot_table(index='A', columns=['B', 'C'], values='D', aggfunc='sum', fill_value=0, margins=True, margins_name='Total'))
+
+```
+
+
+---
+
+### Melting Data
+
+- Reshaping data from wide to long format
+- Can be used to unpivot a DataFrame
+- Can be used to create a tidy dataset
+
+---
+
+### Melting Data Example
+
+```python
+
+
+
+df = pd.DataFrame({'A': ['foo', 'foo', 'foo', 'bar', 'bar', 'bar'],
+                   'B': ['one', 'one', 'two', 'two', 'one', 'one'],
+                   'C': ['small', 'large', 'large', 'small', 'small', 'large'],
+                   'D': [1, 2, 2, 3, 3, 4]})
+print(df)
+
+# melt
+print(df.melt(id_vars=['A', 'B'], value_vars=['C', 'D'], var_name='variable', value_name='value'))
+
+```
 
 ## Statistical Analysis with Statsmodels
 
