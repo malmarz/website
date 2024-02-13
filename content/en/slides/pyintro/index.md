@@ -81,6 +81,16 @@ https://malmarz.netlify.app/en/courses/pyintro/
 
 ---
 
+### Using Terminal
+
+- On VSCode, there is a terminal menu to open and use the terminal
+- On Windows, you can use PowerShell or Command Prompt (cmd)
+- On Mac, you can use Terminal
+- On Linux, .... you shouldn't be using linux if you don't know how to use the terminal :)
+- On Jupyter Notebook, use `!` to run terminal commands within a cell
+
+---
+
 ### Outline
 
 1. Why Python?
@@ -980,7 +990,11 @@ Conventional for most data science libraries
 ```bash
 $ pip install pandas
 ```
-**Remember**: This is a shell/terminal command
+**Remember**: 
+- This is a shell/terminal command
+- If you get an error:
+  - Try using `pip3` instead of `pip`
+  - You might need to use `sudo` on linux and mac or run terminal as administrator on windows
 
 ---
 
@@ -1846,20 +1860,160 @@ sns.set_context('talk') # this sets the font size for talk
 
 ## Reshaping Data
 
-Pivoting data
-Melting data
-Concatenating and merging data
+- Get familiar with the concepts of tidy data
+  - See [Hadley Wickham's paper](https://www.jstatsoft.org/article/view/v059i10)
+- Make data tidy
+  - You meld to convert wide to long format
+    - Useful for analysis
+  - You pivot to convert long to wide format
+    - Usefu
+- Concatenate and merge data
+  
+---
+
+### Tidy Data
+
+- Requirements:
+  - Each variable forms a column
+  - Each observation forms a row
+  - Each type of observational unit forms a table
 
 ---
 
-### Pivoting Data
+### Tidy Data
 
-- Reshaping data from long to wide format
-- Can be used to create a pivot table, cross-tabulation, or contingency table
+- 3rd normal form in databases
+- Can be long or wide
+- Many tools and libraries assume data is tidy
+  - Especially for visualization
 
 ---
 
-### Pivoting Data Example
+### Data Example
+
+| Name         | treatmenta | treatmentb |
+|--------------|------------|------------|
+| John Smith   | —          | 2          |
+| Jane Doe     | 16         | 11         |
+| Mary Johnson | 3          | 1          |
+
+-Is this tidy?
+
+source: [(Wickham 2014)](https://www.jstatsoft.org/article/view/v059i10)
+
+---
+
+### Another Data Example
+
+| Name         | John Smith | Jane Doe | Mary Johnson |
+|--------------|------------|----------|--------------|
+| treatmenta   | —          | 16       | 3            |
+| treatmentb   | 2          | 11       | 1            |
+
+-Is this tidy?
+
+source: [(Wickham 2014)](https://www.jstatsoft.org/article/view/v059i10)
+
+---
+
+### Yet Another Data Example
+
+| Name         | Treatment | Result |
+|--------------|-----------|--------|
+| John Smith   | a         | —      |
+| Jane Doe     | a         | 16     |
+| Mary Johnson | a         | 3      |
+| John Smith   | b         | 2      |
+| Jane Doe     | b         | 11     |
+| Mary Johnson | b         | 1      |
+
+-Is this tidy?
+
+source: [(Wickham 2014)](https://www.jstatsoft.org/article/view/v059i10)
+
+---
+
+
+### Converting from Wide to Long Format
+
+```python
+df = pd.DataFrame({
+    'Name': ['John Smith', 'Jane Doe', 'Mary Johnson'],
+    'treatmenta': [None, 16, 3],  # Assuming '—' represents missing data
+    'treatmentb': [2, 11, 1]
+})
+
+# Melt the DataFrame to long format
+df_long = df.melt(id_vars=['Name'], var_name='Treatment', value_name='Result')
+
+# Display the tidy DataFrame
+print(df_long)
+
+```
+
+---
+
+### Melted Data
+
+| Name         | Treatment | Result |
+|--------------|-----------|--------|
+| John Smith   | treatmenta | —      |
+| Jane Doe     | treatmenta | 16     |
+| Mary Johnson | treatmenta | 3      |
+| John Smith   | treatmentb | 2      |
+| Jane Doe     | treatmentb | 11     |
+| Mary Johnson | treatmentb | 1      |
+
+Lets fix treatment to be a and b
+
+---
+
+### Solution
+
+```python
+# just remove the word treatment from the data
+tidy_df['Treatment'] = tidy_df['Treatment'].str.replace('treatment', '')
+```
+
+---
+
+### What Happened Here?
+
+```python
+df.melt(id_vars=['Name'], var_name='Treatment', value_name='Result')
+```
+
+- `id_vars` specifies the columns to keep as is (identifier variables)
+- `var_name` specifies the name of the new column that contains the wide column names
+- `value_name` specifies the name of the new column that contains the values from the wide columns
+
+---
+
+### Converting from Long to Wide Format
+
+```python
+
+df_long.pivot(index='Name', columns='Treatment', values='Result')
+
+```
+
+---
+
+### Pivot vs Pivot Table
+
+- `pivot` is a reshaping method
+  - Does not aggregate data
+  - Requires unique index/column pairs
+    - Otherwise, you will get a `ValueError`
+- `pivot_table` is a reshaping method
+  - Aggregates data
+  - Does not require unique index/column pairs
+  - Has more arguments
+  - Used to create a summary table
+
+---
+
+### Pivot Table Example
 
 ```python
 
@@ -1877,37 +2031,88 @@ print(df.pivot_table(index='A', columns=['B', 'C'], values='D', aggfunc='sum', f
 
 ```
 
-
 ---
 
-### Melting Data
-
-- Reshaping data from wide to long format
-- Can be used to unpivot a DataFrame
-- Can be used to create a tidy dataset
-
----
-
-### Melting Data Example
-
-```python
-
-
-
-df = pd.DataFrame({'A': ['foo', 'foo', 'foo', 'bar', 'bar', 'bar'],
-                   'B': ['one', 'one', 'two', 'two', 'one', 'one'],
-                   'C': ['small', 'large', 'large', 'small', 'small', 'large'],
-                   'D': [1, 2, 2, 3, 3, 4]})
-print(df)
-
-# melt
-print(df.melt(id_vars=['A', 'B'], value_vars=['C', 'D'], var_name='variable', value_name='value'))
-
-```
 
 ## Statistical Analysis with Statsmodels
 
-Introduction to Statsmodels
+---
+
+### Introduction to Statsmodels
+
+- Statistical modeling and testing
+- Integrates well with pandas
+- Provides R-style model specification
+- Comprehensive output that you can interact with
+- Documentation can be found [here](https://www.statsmodels.org/devel/user-guide.html)
+---
+
+### Available Models
+
+- [Various linear models](https://www.statsmodels.org/devel/user-guide.html#regression-and-linear-models)
+- Time series analysis
+- Much more
+- [Examples](https://www.statsmodels.org/dev/examples/index.html) is another great resource for learning 
+
+---
+
+### OLS Example
+
+```python
+
+import statsmodels.api as sm
+
+data = sm.datasets.longley.load_pandas()
+
+print(data.data) # whole dataset
+print(data.endog) # endogenous variable
+print(data.exog) # exogenous variables
+
+print(data.endog_name)
+print(data.exog_name)
+
+res = sm.OLS(data.endog, data.exog).fit()
+print(res.summary())
+
+```
+
+---
+
+### Residual Plot Example
+
+```python
+
+import statsmodels.api as sm
+import matplotlib.pyplot as plt
+
+# use res from the previous example
+fig = plt.figure()
+fig = sm.graphics.plot_regress_exog(res, 'GNP', fig=fig)
+fig.tight_layout(pad=1.0)
+plt.show()
+
+
+```
+
+### GLM Example (R-style formula)
+  
+  ```python
+import statsmodels.api as sm
+import statsmodels.formula.api as smf
+
+data = sm.datasets.star98.load_pandas()
+print(data.data)
+
+res = smf.glm(
+  'SUCCESS ~ LOWINC + PERASIAN + PERBLACK + PERHISP + PCTCHRT',
+  data=data.data, 
+  family=sm.families.Binomial()
+).fit()
+
+print(res.summary())
+  ```
+---
+
 Simple linear regression
 Multiple linear regression
 
