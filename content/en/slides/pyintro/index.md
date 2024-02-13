@@ -909,12 +909,6 @@ df2.columns
 
 ---
 
-## Break
-- Resume in 15 minutes
-- Make sure pandas library is installed
-- See next few slides for instructions
-
----
 
 ### Python Libraries
 - Built-in
@@ -1060,6 +1054,12 @@ $ pip install pandas
 - scrapy
 - beautifulsoup
 - GROBID
+
+---
+
+## Break
+- Resume in 15 minutes
+- Make sure pandas library is installed
 
 ---
 
@@ -1272,7 +1272,7 @@ print(df.loc['x':'y'])  # maintains order
 ```
 
 
---
+---
 
 ### Selecting Rows and Columns
 
@@ -1291,6 +1291,8 @@ print(df.loc['x':'y', 'a':'b'])
 print(df.iloc[0:2, 0:2])
 
 ```
+
+---
 
 ### Notice
 
@@ -1443,12 +1445,20 @@ df.to_sas('file.sas7bdat')
 df.to_parquet('file.parquet')  # requires pyarrow 
 ```
 
+---
+
 ### Things to Note About Saving and Loading Data
 
 - You can specify the file path
 - For arabic text, you might have to specify the encoding
   - Likely to be `utf-8`
 - You can store or drop the index
+
+
+---
+
+### Things to Note About Saving and Loading Data
+
 - You can specify data types for each column
   - Either during or after loading
   - Use dtype argument in `read_*` functions
@@ -1468,7 +1478,11 @@ df.to_parquet('file.parquet')  # requires pyarrow
 ### Missing Data Example
 
 ```python
-df = pd.DataFrame({'a': [1, 2, np.nan], 'b': [4, np.nan, 6], 'c': [np.nan, 8, 9]})
+df = pd.DataFrame({
+  'a': [1, 2, np.nan], 
+  'b': [4, np.nan, 6],
+  'c': [np.nan, 8, 9]
+   })
 print(df)
 
 # drop rows with missing data
@@ -1486,8 +1500,11 @@ print(df.fillna(0))
 ### Removing Duplicates Example
 
 ```python
-
-df = pd.DataFrame({'a': [1, 2, 2, 3], 'b': [4, 5, 5, 6], 'c': [7, 8, 8, 9]})
+df = pd.DataFrame({
+  'a': [1, 2, 2, 3], 
+  'b': [4, 5, 5, 6], 
+  'c': [7, 8, 8, 9],
+  })
 print(df)
 
 # drop duplicates
@@ -1496,6 +1513,13 @@ print(df.drop_duplicates())
 # drop duplicates based on a column
 print(df.drop_duplicates(subset=['a']))
 
+```
+
+---
+
+### Removing Duplicates Example
+
+```python
 # display duplicates
 print(df[df.duplicated()])
 
@@ -1523,10 +1547,15 @@ print(df[df.duplicated(subset=['a'])])
 ### Solution
   
   ```python
-  df = pd.DataFrame({'a': [1, 2, 2, 3], 'b': [4, 5, 5, 6], 'c': [7, 8, 8, 9]})
+  df = pd.DataFrame({
+    'a': [1, 2, 2, 3], 
+    'b': [4, 5, 5, 6], 
+    'c': [7, 8, 8, 9],
+    })
   print(df)
 
-  # drop duplicates, use this with any operation that changes the dataframe
+  # drop duplicates, use this with any
+  # operation that changes the dataframe
   df = df.drop_duplicates()
   print(df)
 
@@ -1540,8 +1569,8 @@ print(df[df.duplicated(subset=['a'])])
 ### Renaming and Replacing Example
 
 ```python
-
-df = pd.DataFrame({'a': [1, 2, 3], 'b': [4, 5, 6], 'c': [7, 8, 9]})
+df = pd.DataFrame({
+  'a': [1, 2, 3], 'b': [4, 5, 6], 'c': [7, 8, 9],})
 print(df)
 
 # rename columns
@@ -1565,6 +1594,15 @@ print(df_replaced)
 - Grouping and aggregating data
 - Correlation and covariance
 
+---
+
+### Load Gapminder Data
+  
+```python
+import pandas as pd
+url = "https://raw.githubusercontent.com/resbaz/r-novice-gapminder-files/master/data/gapminder-FiveYearData.csv"
+df = pd.read_csv(url)
+```
 ---
 
 ### Descriptive Statistics Example
@@ -1591,7 +1629,8 @@ print(df['gdpPercap'].quantile(0.75))
 print(df.groupby('country')['gdpPercap'].mean())
 
 # or
-print(df.groupby('country')['gdpPercap'].agg(['mean', 'median', 'std', 'min', 'max', 'count']))
+print(df.groupby('country')['gdpPercap'].agg(
+  ['mean', 'median', 'std', 'min', 'max', 'count']))
 
 # or 
 print(df.groupby('country').agg(
@@ -1600,9 +1639,9 @@ print(df.groupby('country').agg(
     'lifeExp': ['mean', 'median', 'std', 'min', 'max', 'count'],
     }
   ))
-
-
 ```
+
+---
 
 ### Aggregating Without Reshaping DataFrames
 
@@ -1677,6 +1716,11 @@ df.plot(x='year', y='gdpPercap', kind='scatter')
 - hist
 - box
 - kde
+
+---
+
+### Plot Kinds Supported by Pandas
+
 - density
 - area
 - pie
@@ -1866,7 +1910,7 @@ sns.set_context('talk') # this sets the font size for talk
   - You meld to convert wide to long format
     - Useful for analysis
   - You pivot to convert long to wide format
-    - Usefu
+    - Useful for summaries
 - Concatenate and merge data
   
 ---
@@ -1939,16 +1983,16 @@ source: [(Wickham 2014)](https://www.jstatsoft.org/article/view/v059i10)
 ```python
 df = pd.DataFrame({
     'Name': ['John Smith', 'Jane Doe', 'Mary Johnson'],
-    'treatmenta': [None, 16, 3],  # Assuming '—' represents missing data
-    'treatmentb': [2, 11, 1]
-})
+    'treatmenta': [None, 16, 3], 
+    'treatmentb': [2, 11, 1]})
 
 # Melt the DataFrame to long format
-df_long = df.melt(id_vars=['Name'], var_name='Treatment', value_name='Result')
+df_long = df.melt(
+  id_vars=['Name'], 
+  var_name='Treatment', 
+  value_name='Result')
 
-# Display the tidy DataFrame
 print(df_long)
-
 ```
 
 ---
@@ -2027,7 +2071,9 @@ print(df)
 print(df.pivot_table(index='A', columns='B', values='D'))
 
 # More arguments
-print(df.pivot_table(index='A', columns=['B', 'C'], values='D', aggfunc='sum', fill_value=0, margins=True, margins_name='Total'))
+print(df.pivot_table(index='A', 
+columns=['B', 'C'], values='D', aggfunc='sum', 
+fill_value=0, margins=True, margins_name='Total'))
 
 ```
 
@@ -2078,21 +2124,18 @@ print(res.summary())
 
 ---
 
-### Residual Plot Example
+### Goodness Of Fit Example
 
 ```python
 
 import statsmodels.api as sm
 import matplotlib.pyplot as plt
 
-# use res from the previous example
-fig = plt.figure()
-fig = sm.graphics.plot_regress_exog(res, 'GNP', fig=fig)
-fig.tight_layout(pad=1.0)
+fig = sm.graphics.qqplot(res.resid, line='q')
 plt.show()
 
-
 ```
+---
 
 ### GLM Example (R-style formula)
   
@@ -2100,40 +2143,155 @@ plt.show()
 import statsmodels.api as sm
 import statsmodels.formula.api as smf
 
-data = sm.datasets.star98.load_pandas()
-print(data.data)
+data = sm.datasets.get_rdataset('epil', package='MASS').data
+print(data)
 
-res = smf.glm(
-  'SUCCESS ~ LOWINC + PERASIAN + PERBLACK + PERHISP + PCTCHRT',
-  data=data.data, 
-  family=sm.families.Binomial()
-).fit()
+mod = smf.glm(
+  "y ~ age + trt + base", 
+  data,
+  family=sm.families.Poisson()
+)
+
+res = mod.fit()
 
 print(res.summary())
+
+# check for overdispersion 
+if res.pearson_chi2 / res.df_resid > 1:
+    print('We have overdispersion')
+else:
+    print('No evidence to suggest overdispersion')
+
   ```
 ---
 
-Simple linear regression
-Multiple linear regression
+### Exploring Statsmodels
+
+- Documentation is extensive
+- Examples are very useful
+- Check them out [here](https://www.statsmodels.org/stable/stats.html)
 
 ---
 
-## ML with Scikit-learn
+## Machine Learning with Scikit-learn
 
-Introduction to Scikit-learn
-Supervised learning
-Unsupervised learning
+---
 
+### What is Scikit-learn?
+
+- Simple and efficient tools for ML and statistical modeling
+- Can be used for classification, regression, clustering, dimensionality reduction, and more
+- Built on NumPy, SciPy, and matplotlib
+- Open source, commercially usable - BSD license
+- Documentation can be found [here](https://scikit-learn.org/stable/user_guide.html)
+- Check also common pitfalls and best practices [here](https://scikit-learn.org/stable/common_pitfalls.html)
+
+---
+
+### Scikit-learn FlowChart
+
+![Scikit-learn FlowChart](https://scikit-learn.org/stable/_static/ml_map.png)
+
+---
+
+### So Much To Learn
+
+- Little time to cover everything
+- Someone has probably solved your problem in Python
+- You can find a library, documentation, tutorials, and a discord community for almost anything
+- Have fun exploring!
 
 ---
 
 
-## Reproducible Research
+## Reproducible Research Documents
+### Using Quarto
 
 ---
+
+### What is Quarto?
+
+- Open Source technical publishing system
+- Designed for reproducible research
+- Language agnostic
+  - Supports Python, R, Julia, and more
+- IDE agnostic
+  - Supports Jupyter, RStudio, VSCode, and more
+- Embeds code, data, results, references, and narrative
+
+---
+
+### What is Quarto?
+
+- Utilizes Markdown
+- Can be used to produce documents, reports, presentations, books, and websites
+- Supports multiple output formats
+  - HTML, PDF, Word, Jupyter Notebooks, LaTex and more
+- Facilitates collaboration and sharing
+  - Best when used with version control systems (e.g, Git)
+- Documentation can be found [here](https://quarto.org/docs/)
+
+---
+
+### What is Markdown?
+
+- Lightweight markup language
+- Used to format plain text
+  - Headings, lists, links, images, tables, and more
+- Easy to read and write
+- Easily converted to other formats
+- This presentation is written in Markdown
+- Reference can be found [here](https://www.markdownguide.org/)
+- Quarto uses a superset of Markdown
+  - Reference can be found [here](https://quarto.org/docs/authoring/markdown-basics.html)
+
+---
+
+### Let's Start Using Quarto
+
+- Install Quarto
+- Create a new Quarto project
+  - In VSCode press Shift+Ctrl+p for command panel
+  - Type `Quarto` and select `Create New Project`
+- Create a manuscript project
+- Choose directory to store project and give it a name
+
+---
+
+### Let's Start Using Quarto
+
+- Explore configuration, qmd file options, and authoring 
+- Explore [Quarto guide](https://quarto.org/docs/guide/) and try [Getting started guide](https://quarto.org/docs/get-started/)
+---
+
+### Explore Following Features
+
+- Previewing documents in different formats
+- Explore [markdown](https://quarto.org/docs/authoring/markdown-basics.html)
+- Embedding code and options
+  - Embed variables inline
+- Draw plots and diagrams
+- Use references and citations
+- Use mermaid diagrams
+
+---
+
 
 ## Final Thoughts
 - Use Python to become proficient
 - https://software-carpentry.org/lessons/
 
 
+---
+
+## Thank You
+
+mo.almarzouq@ku.edu.kw
+
+Course Material
+
+https://malmarz.netlify.app/en/courses/pyintro/
+
+Dont' Forget
+
+https://journals.ku.edu.kw/ajas
