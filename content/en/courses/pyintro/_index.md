@@ -43,4 +43,7 @@ While there are many ways to use python, development can be done locally or in t
 Instructions on how to setup VS code for python development can be found [here](https://code.visualstudio.com/docs/python/python-tutorial)
 
 ## Course Content
-Slides for this session can be found [here]({{< ref "slides/pyintro" >}}).
+
+- Slides for this session can be found [here]({{< ref "slides/pyintro" >}}).
+- The code written in this session can be found [here](https://github.com/malmarz/pyintro_2024).
+

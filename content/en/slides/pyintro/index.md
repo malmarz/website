@@ -52,6 +52,12 @@ https://malmarz.netlify.app/en/courses/pyintro/
 
 ---
 
+### Code Repository
+
+https://github.com/malmarz/pyintro_2024
+
+---
+
 ### Submit Your Research Papers
 
 - Arab Journal of Administrative Sciences
