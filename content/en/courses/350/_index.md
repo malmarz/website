@@ -38,11 +38,10 @@ image:
 We will mainly use the replit.com cloud IDE for development. To setup for this course, you will be required to perform the following:
 
 - Read the [Syllabus](https://bit.ly/mis350_syl)
-- Signup for [class replit team](https://replit.com/teams/join/apgdmxvisgioqrsdtgzkbnwyswssbyvi-ISOM350Fall21)
-- Signup for [{{< icon name="github" pack="fab" >}}github.com](https://github.com/join)
-  - Complete the first [GitHub assignment to join our GitHub classroom](https://classroom.github.com/a/iqmDyYrU)
-- Completion of an introductory course in programming (Doesn't have to be Python)
 - [Setup python on your computer]({{< ref "courses/350/pysetup" >}})
+- Signup for [{{< icon name="github" pack="fab" >}}github.com](https://github.com/join)
+  - Complete the first [GitHub assignment to join our GitHub classroom](https://https://classroom.github.com/classrooms/197493242-isom350-s25-9am)
+- Completion of an introductory course in programming (Doesn't have to be Python)
 
 ## Required References
 
@@ -88,5 +87,5 @@ pip install django
 | 4 |  [Data Models]({{< ref "courses/350/blog-project/models.md" >}}) | [{{< icon name="file-powerpoint" pack="fas" >}}]({{< ref "slides/350/django-models" >}}) | |
 | 5 |  [Django Admin]({{< ref "courses/350/blog-project/admin.md" >}}) | [{{< icon name="file-powerpoint" pack="fas" >}}]({{< ref "slides/350/django-admin" >}}) | |
 | 5 |  [Improved Django Admin]({{< ref "courses/350/blog-project/improved-admin.md" >}}) | [{{< icon name="file-powerpoint" pack="fas" >}}]({{< ref "slides/350/django-admin" >}}) | |
-
  -->
+
