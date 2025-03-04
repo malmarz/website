@@ -20,7 +20,8 @@ Branching should allow you to experiment with code and make mistakes without bre
 
 This guide will help you understand how to create, merge, and delete branches using both GitHub Desktop and the command line. Choose your preferred method:
 
-- [Using GitHub Desktop](#using-github-desktop)
+- [Using GitHub Desktop](#using-github-desktop), or check [GitHub Desktop documentation on managing branches](https://docs.github.com/en/desktop/making-changes-in-a-branch/managing-branches-in-github-desktop)
+
 - [Using Git (Command Line)](#using-git-command-line)
 
 ---
@@ -32,6 +33,7 @@ This guide will help you understand how to create, merge, and delete branches us
 1. Open GitHub Desktop.
 2. Click on **"Current Branch"** (top-left).
 3. Click **"New Branch"**, name it, and click **"Create Branch"**.
+
 
 ### 2. Merging the Branch When the Task is Complete
 
