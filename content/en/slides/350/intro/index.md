@@ -61,7 +61,6 @@ Introduction
 ## Requirements
 
 - Read the [Syllabus](https://bit.ly/mis350_syl)
-- Signup for [class replit team](https://replit.com/teams/join/slpharshbwpedtcbfdfsnrkqjlkjpabh-miscba)
 - Signup for [github.com](https://github.com/join)
 - Completion of an introductory course in programming (Doesn't have to be Python)
 - Get familiar with [Django's Documentation](https://docs.djangoproject.com/en/3.1/)
