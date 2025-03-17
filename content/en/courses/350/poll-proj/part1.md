@@ -19,7 +19,7 @@ draft: False
 ---
 
 {{% callout note %}}
-Due Date is <strong>Wednesday March 19th 9am</strong>
+Due Date is <strong>Thursday March 20th 3pm</strong>
 {{% /callout %}}
 
 You are expected to work as a team on this project. Be sure to follow the workflow that we have explained in class/lab, including the pull request. Part of your assisment will be based on how well you work as a team and use the tools provided by GitHub to collaborate. It will be the responsibility of the project manager to ensure that the team is working together and that the work is distributed fairly.
