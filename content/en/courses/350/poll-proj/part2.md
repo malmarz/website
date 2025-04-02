@@ -19,45 +19,45 @@ draft: false
 ---
 
 {{% callout note %}}
-Due Date is <strong>Thursday Nov 23rd 2pm</strong>
+The due date for this assignment is <strong>Wednesday, April 9th, 11:59pm</strong>.
 {{% /callout %}}
 
-## Requirements for This Assignments 
+## Assignment Requirements
 
-- [ ] **15 pts:** Create a view to list all the posts which have a **published** status. For each poll in the list, show the poll title and date it will be active until.
-- [ ] **15 pts:** Create a view to list all the posts which have a **unpublished** status,  For each poll in the list, show the poll title and date it will be active until.
-- [ ] **10 pts:** Create an index view which allows the user to select whether to open the list view for published polls or the list view for unpublished polls (**Hint:** This is just a page with two links to the previous list views).
-- [ ] **15 pts:** Create a view to show the details of a single poll which include the title, the questions, and list of choices available
-- [ ] **10 pts:** In both poll list views, make the title of each poll into a link that opens the corresponding poll's detailed view when clicked.
-- [ ] **10 pts:** In both poll list views, show number of options for each poll.
+- [ ] **15 pts:** Create a view to display all polls with a **published** status. For each poll, show the poll title and the date it will remain active until.
+- [ ] **15 pts:** Create a view to display all polls with an **unpublished** status. For each poll, show the poll title and the date it will remain active until.
+- [ ] **10 pts:** Create an index view that allows the user to choose between viewing the list of published polls or unpublished polls (**Hint:** This is a page with two links to the respective list views).
+- [ ] **15 pts:** Create a detailed view for a single poll that includes the title, the questions, and the list of available choices.
+- [ ] **10 pts:** In both poll list views, make the title of each poll a clickable link that opens the corresponding poll's detailed view.
+- [ ] **10 pts:** In both poll list views, display the number of options available for each poll.
 
-### ReadMe.md
-- [ ] Update the readme file with a section to detail how work was ditributed. The section should include the following:
-    - Who was the project manager
-    - How work was distributed
-    - How the team collaborated
-    - Any other information you think is relevant to the project management process
+### Update ReadMe.md
+
+- [ ] Add a section to the `ReadMe.md` file detailing how the work was distributed. Include the following:
+    - The project manager's name.
+    - How tasks were distributed among team members.
+    - How the team collaborated.
+    - Any other relevant information about the project management process.
 
 ### Bonus Tasks
 
-These tasks will involve reading the Django documentation and figuring out things on your own. Perform these tasks only after you complete the previous requirements of the assignment.
+These tasks require additional research using the Django documentation. Complete them only after finishing the main assignment requirements.
 
-- [ ] In ReadMe.md, create a section named **Bonus** and list all the bonus items you completed in this project. Bonus items will be ignored if not listed on Readme.md
-- [ ] **(10 pts)** For the links, instead of typing the path yourself, give the path names and use the [url template tag from Django](https://docs.djangoproject.com/en/3.2/ref/templates/builtins/#url)
-- [ ] **(5 pts)** In the Poll list view, instead of showing absolute time in which the poll will be active until (e.g., 10pm 12/12/2021) show the relative time it will remain active (e.g, **active for another 10 days, 6 hours, 5 minutes**). Search Django's template filters to find the solution. It should be a very simple one. 
-- [ ] **(10 pts)** Read about the [bootstrap CSS framework](https://getbootstrap.com/docs/5.0/getting-started/introduction/) and try to use it to improve the look and feel of your application
-- [ ] **(20 pts)** Get a head start and read this [Django forms tutorial](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Forms), try to create a view that allows users to submit their responses **(HINT: You will also need to read about ModelChoiceField)**
-
+- [ ] In `ReadMe.md`, create a section named **Bonus** and list all the bonus items you completed. Bonus items will not be considered if they are not listed in the `ReadMe.md`.
+- [ ] **(10 pts)** Use Django's [url template tag](https://docs.djangoproject.com/en/3.2/ref/templates/builtins/#url) for links instead of hardcoding paths.
+- [ ] **(5 pts)** In the poll list views, display the relative time remaining for each poll (e.g., **active for another 10 days, 6 hours, 5 minutes**) instead of the absolute time. Use Django's template filters to achieve this.
+- [ ] **(10 pts)** Explore the [Bootstrap CSS framework](https://getbootstrap.com/docs/5.0/getting-started/introduction/) and use it to enhance the appearance of your application.
+- [ ] **(20 pts)** Get a head start by reading this [Django forms tutorial](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Forms). Try creating a view that allows users to submit their responses (**Hint:** You will also need to learn about `ModelChoiceField`).
 
 ## How to Start and Submit Your Project
 
-1. Join the [poll-project part 2 assignment on github classroom](https://classroom.github.com/a/Os4FpPm8).
-2. Clone your assignment project using GitHub desktop to your computer and remember to work on the main/master branch.
-3. When done, commit then push your work using GitHub Desktop. You can continue to make changes and push code after submission.
+1. Join the [poll-project part 2 assignment on GitHub Classroom](https://classroom.github.com/a/YV0sEa1T).
+2. Clone your assignment project using GitHub Desktop and work on the main/master branch.
+3. When finished, commit and push your work using GitHub Desktop. You can continue to make changes and push updates after submission.
 
-## Grading Criteria (Total 100 pts, 10% of total grade)
+## Grading Criteria (Total 100 pts, 5% of total grade)
 
-- If submitted project doesn't work, you will receive **5 pts only**
-- Demonstrating proper team work and collaboration **25 pts**
-    - Use of pull requests, branching, and proper merging will be checked.
-- If submitted project works, breakdown of grades shown next to each requirement (Partial credit could be awarded) **75 pts**
+- If the submitted project does not work, you will receive **5 pts only**.
+- Demonstrating proper teamwork and collaboration **25 pts**:
+    - Use of pull requests, branching, and proper merging will be evaluated.
+- If the submitted project works, the breakdown of grades is shown next to each requirement (partial credit may be awarded) **75 pts**.
