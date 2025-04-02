@@ -18,103 +18,97 @@ draft: false
 ---
 
 {{% callout note %}}
-Demonstrations are due on day before last of our class, Monday, Dec 25th during class time
+**Important Deadlines:**
+- **Project Proposal Due Date:** Sunday, April 13th, 11:59 PM
+- **Final Project Due Date:** Sunday, May 11th, 11:59 PM
+- **Demo Date:** May 12th, during class
 {{% /callout %}}
 
-# Your Options
-Since this is a project course, you are expected to work on a project. You have two options to choose from:
-1. You can choose your own project.
-2. You can choose to work on the e-commerce project described below.
+# Project Options
+This is a project-based course, and you are required to complete a project. You have two options to choose from:
+
+1. **Choose Your Own Project**
+2. **Work on the E-Commerce Project** (described below)
 
 ## Option 1: Choose Your Own Project
 
-You can choose your own project if you think this will drive you to learn more. I will require that you submit a proposal describing your project and include the complete requirements. Your proposal should be shown to me after class or during office hours. You **must get my approval before you can take this options**.
+If you prefer, you can propose your own project. This option allows you to explore a topic that interests you and encourages deeper learning. To proceed with this option:
 
-Teams have until Nov 9th to get my approval. Otherwise, they will be forced to take the e-commerce project.
+- Submit a proposal that describes your project and includes detailed requirements.
+- Present your proposal to me after class or during office hours for approval.
+- **Approval Deadline:** Teams must receive approval by **April 7th**. If approval is not obtained by this date, you will be required to work on the e-commerce project.
 
 ## Option 2: E-Commerce Project
 
-You sit down with a representative of an online retailing business that are looking to build a new e-commerce platform for their business. In the interview, he gives the following description of what they want in the new platform:
+For this option, you will work on building an e-commerce platform based on the following client requirements:
 
-'''
-We require an e-commerce platform to display our products and allow users to search and purchase items. Since we are an online retailer, our products will have different categories. The product will have a description, a serial number, price, and quantity in store. It would also be preferable to have an image displayed of the product and have simple inventory management as part of the system.
+> "We need an e-commerce platform to display our products and allow users to search and purchase items. Products will have categories, descriptions, serial numbers, prices, and quantities in stock. It would be ideal to include product images and basic inventory management.
+>
+> The platform should also manage customer information, including names, addresses, emails, and phone numbers. Additionally, we need CRM features to track purchase history and calculate customer profitability scores.
+>
+> To promote sales, customers should be able to leave reviews, read reviews, and see which products are the most popular in each category."
 
-The platform should keep track of our customer information. At the minimum, we expect to keep records of our customers' names, addresses, emails, and phone numbers. The platform should also provide some CRM features to help us manage our customers to improve their loyalty. For that, we need to at least keep track of the purchase history of our customers and calculate a profitability score for them.
+### Steps for the E-Commerce Project
+1. Use the client description to create an **ER Diagram** for your project.
+2. Define project requirements as tickets in a ticketing system or as a list in the `ReadMe.md` file.
+3. Implement the system based on the requirements, updating tickets as you refine the project.
+4. Leave incomplete tickets in the system to show your thought process and planning.
 
-We are also interested in ways in which to promote sales of our products. Customers should be able to review and read reviews on our products or see which of our products are selling the most from different categories.
-'''
+## Requirements for Both Options
 
-The description would be a good start for your team to set the main requirements. It represents the bare minimum that should be included in the system. You can go beyond what the description provides for additional credits, but be sure to cover the customer requirements.
+- **Team Registration:** [Sign up your team here](https://classroom.github.com/a/8FJizrQU).
+- **Team Roles:** Assign a project manager and list all team members in the `ReadMe.md` file. Clearly indicate who the project manager is.
+- **Documentation:**
+  - For **Option 1**, describe the complete project requirements in the `ReadMe.md` file.
+  - For **Option 2**, clearly state that you are working on the e-commerce project and give your project a unique name that reflects the business or product.
+- **Project Management:**
+  - Create an **ER Diagram** to define the information requirements. Use [ERD Plus](https://erdplus.com/) and include the diagram in the `ReadMe.md` file.
+  - Define project requirements in one of two ways:
+    1. Write them in the `ReadMe.md` file as a list of specific tasks (similar to the Poll Project assignment).
+    2. **Optional (Bonus):** Use a ticketing system (e.g., [GitHub Issues](https://docs.github.com/en/issues), [Trello](https://trello.com/guide), or [Jira](https://www.atlassian.com/software/jira/guides/getting-started/introduction#what-is-jira-software)) to manage tasks. This requires learning agile project management techniques.
+- **Demonstration:** Bring a PC to class to demonstrate your project.
+- **Go Beyond Requirements:** Add extra features to make your application more valuable. Use your time wisely to learn new Django features and improve your project.
 
-USe this description to build the ER Diagram for your project then start putting together requirements in the form of tickets. Then start implementing the system and updating the tickets as you get more ideas on how to improve the system. Do your best to implement as much of the requirements as you can. Be sure to leave the tickets that you do not complete in the ticket management system as it will indicate how much you have thought about the system.
+## Grading Criteria
 
+### 1. Demonstration (30%)
+Each team will have 10 minutes to present their project. During the demo, you should:
+1. Introduce team members and provide an overview of the project.
+2. Demonstrate key features of the application, focusing on its functionality and design.
+3. Answer questions about the application, including technical and business-related aspects.
 
-## Requirements For Both Options
+Evaluation will be based on:
+- Effective use of time
+- Quality of the presentation
+- How well the application meets the requirements
+- Preparation (e.g., test data, planned demo flow)
+- Ability to answer questions
+- Application functionality
 
-- [Signup your team](https://classroom.github.com/a/nzIxyJ4Q).
-- Team must agree on a project manager. Write the name of the team members on the readme file and make clear who the project team leader is.
-- **If you chose option 1:** You must describe the complete requirements of your projects in the Readme file of the project.
-- **If you chose option 2:** You must make clear in the readme file that you are working on the e-commerce project and give your project a unique name that reflects what you are selling or the imaginary company you are serving.
-- **For both project options:** perform the following project management and design tasks
-  - Determine the information requirements of the project by drawing the ER-Diagram. You can use [ERD Plus](https://erdplus.com/) then download the image and post it in the Readme file of the project.
-  - Determine the requirements of the project in one of two options:
-    1. Write the requirements in the Readme file of the project. They should be broken down into specific task exactly like the requirements in the Poll project assignment you worked on. Each requirement must describe a single task.
-    2. **Optional (Bonus based on how well you use it):** Utilize a ticketing system to manage and coordinate your project. Requirments will be written as ticket. You must read and learn agile project management skills on your own here. You will need to invest some time reading and trying out the process. Your options are:
-  - [GitHub issues](https://docs.github.com/en/issues)
-  - [Trello](https://trello.com/guide)
-  - [Jira](https://www.atlassian.com/software/jira/guides/getting-started/introduction#what-is-jira-software)
+### 2. Design (10%)
+Design will be evaluated based on:
+- The quality and appropriateness of the ER Diagram
+- The clarity and completeness of the requirements
+- How well the project meets the client’s stated needs
 
-- Arrange to bring one of your PC to class and use it to demonstrate your project.
-- **Important:** Try to go beyond the provided requirements to make your application more valuable. You can only achieve this if you spend time learning new things about Django and utilize your time in class wisely.
-
-
-## Grading The Final Project
-
-### 1. The Demonstration (30%)
-
-  Each team will be given 10 minutes to demonstrate their web application and show that it works. In the ten minutes you need to perform the following:
-  1. Introduce the team members and the general idea of the web application
-  2. Demonstrate the main operation in the app from your choosing and not necessarily all the features. But make sure you show the best parts of your application and show that it is well designed and works (Try to sell it to me or get me to invest in it).
-  3. Be prepared for a Q&A session about your improvements to the app (how you made it more valuable), using the app, and technical questions about the app.
-
-  In the demo, you will mostly be evaluated based on:
-  - How well you utilize your time
-  - How well you present your web app and convince us of its added value
-  - How well the features you implemented meet the main requirements of the app
-  - How well you have prepared the app (be sure to include test data and plan how you will show your app)
-  - How well you answers questions (whether technical about the app/design or business about the idea)
-  - How well your application works
-
-
-### 2. The Design (10%)
-
-TThe design effort of the team will be based on:
-- The appropriateness of the ERD
-- The requirements gathered and written into the ticketing system (be sure not to delete any ticket, even the ones you do not work on)
-- Whether you meet the requirements set by the customer in their description or not. You are welcome for this project to go beyond what the customer asked for, but be sure to cover the requirements.
-
-### 3. The Collaboration (30%)
-
-Teams are expected to utilize what they have learned in this course about GitHub and Collaboration. Evaluation will be based on:
-- How well you get everyone involved in project development and management
-    - Contributing to development
-    - Contributing to project management
-- How well you utilize GitHub for collaboration and project management, which include:
-    - Properly using pull requests
-    - Properly using tickets
-    - Having clear communication and guidelines in the readme for the team to read
+### 3. Collaboration (30%)
+Collaboration will be assessed based on:
+- Team involvement in development and project management
+- Proper use of GitHub for collaboration, including:
+  - Pull requests
+  - Ticketing systems
+  - Clear communication and guidelines in the `ReadMe.md` file
 
 ### 4. Individual Contribution (30%)
+Individual contributions will be evaluated based on:
+1. The amount of work completed by each team member (tracked via GitHub)
+2. Peer evaluations
 
-  Individual contribution will be based on:
-  1. The amount of work done by the individual as reported by GitHub (focused on code)
-  2. Peer evaluation
+### 5. Code Review
+The instructor will perform a final code review to:
+1. Verify that the work was completed by the team without external assistance.
+2. Ensure the application functions as expected.
+3. Evaluate bonus features. Bonus items must be listed in a **Bonus Items** section in the `ReadMe.md` file, with references to the file and line numbers where they are implemented. **Failure to follow this instruction will result in no bonus points being awarded.**
 
-### 5. The Code Review
-
- A final review of the code by the instructor will be performed and could affect your final grade. It will mainly be used to:
-
- 1. Determine that the work was done by the group and not a 3rd party. The group could receive a zero on this project if they received outside assistance. Remember, this is an investment in your self. Work hard to gain the experience.
- 2. Determine that the application works as expected.
- 3. Evaluate bonus grades which. Your group is expected to list all additions done to the project worthy of a bonus grade in a section named **Bonus Items** in the Readme file of the project. List additional features to the requirements and any Django features you used that we did not explain in class. Be sure to list the file and line number that feature was implemented so your instructor can confirm its use. **Failure to follow this instruction would mean that the project team would not receive any bonus points, only listed bonus items will receive grades**. You can get ideas for bonus activities by reading the [advanced django section]({{< ref "django-advanced" >}}).
+For bonus ideas, refer to the [Advanced Django Section]({{< ref "django-advanced" >}}).
 
