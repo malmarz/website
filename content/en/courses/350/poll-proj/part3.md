@@ -19,17 +19,16 @@ draft: false
 ---
 
 {{% callout note %}}
-This is an **optional** assignment and will give you an opportunity to make up for your quiz and assignments grades.
-Due Date is <strong>Thursday Nov 30th 2pm</strong>
+Due Date is <strong>Wed April 30th 10am</strong>
 {{% /callout %}}
 
 ## Requirements for This Assignments 
 
-- [ ] **(10 pts)** Create a view to create a poll. Upon successful creation, the view should redirect you back to the poll list.
-- [ ] **(10 pts)** Create a view to add a single option to a poll. The view should display the poll, its existing options, and a form to add a new option. Upon successful submission, the view should redirect to itself, allowing you to add more options if needed. *(Hint: Use a redirect to reload the page with an empty form.)*
-- [ ] **(10 pts)** Create a view to create a response associated with a selected option. The view should display the poll and the chosen option, with a submit button labeled "Confirm Choice." *(Hint: The selected option should be specified in the URL, e.g., `respond/option/5` for option ID 5.)* Upon successful submission, redirect the user to the detailed view of the poll.
-- [ ] **(10 pts)** Create a view to edit the poll question and details. Upon successful submission, redirect to the detailed poll view.
-- [ ] **(10 pts)** Create a view to edit a single poll option. Upon successful submission, redirect to the detailed poll view.
+- [ ] **(20 pts)** Create a view to create a poll. Upon successful creation, the view should redirect you back to the poll list.
+- [ ] **(20 pts)** Create a view to add a single option to a poll. The view should display the poll, its existing options, and a form to add a new option. Upon successful submission, the view should redirect to itself, allowing you to add more options if needed. *(Hint: Use a redirect to reload the page with an empty form.)*
+- [ ] **(20 pts)** Create a view to create a response associated with a selected option. The view should display the poll and the chosen option, with a submit button labeled "Confirm Choice." *(Hint: The selected option should be specified in the URL, e.g., `respond/option/5` for option ID 5.)* Upon successful submission, redirect the user to the detailed view of the poll.
+- [ ] **(20 pts)** Create a view to edit the poll question and details. Upon successful submission, redirect to the detailed poll view.
+- [ ] **(20 pts)** Create a view to edit a single poll option. Upon successful submission, redirect to the detailed poll view.
 
 ### ReadMe.md
 - [ ] Update the readme file with a section to detail how work was ditributed. The section should include the following:
@@ -53,11 +52,11 @@ These tasks require reading the Django documentation and figuring out solutions 
 
 ## How to Start and Submit Your Project
 
-1. Join the [poll-project part 3 assignment on github classroom](https://classroom.github.com/a/BRv3EByY).
+1. Join the [poll-project part 3 assignment on github classroom](https://classroom.github.com/a/UXhGBlAj).
 2. Clone your assignment project using GitHub desktop to your computer and remember to work on the main/master branch.
 3. When done, commit then push your work using GitHub Desktop. You can continue to make changes and push code after submission.
 
-## Grading Criteria (Total 100 pts, 10% of total grade)
+## Grading Criteria (Total 100 pts, 5% of total grade)
 
 - If submitted project doesn't work, you will Not receive any credits for this assignment
 - Demonstrating proper team work and collaboration **25 pts**
