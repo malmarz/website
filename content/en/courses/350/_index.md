@@ -40,7 +40,7 @@ We will mainly use the replit.com cloud IDE for development. To setup for this c
 - Read the [Syllabus](https://bit.ly/mis350_syl)
 - [Setup python on your computer]({{< ref "courses/350/pysetup" >}})
 - Signup for [{{< icon name="github" pack="fab" >}}github.com](https://github.com/join)
-  - Complete the first [GitHub assignment to join our GitHub classroom](https://classroom.github.com/a/7ZRljjX0)
+  - Complete the first [GitHub assignment to join our GitHub classroom](https://classroom.github.com/a/mRA5Otf1)
 - Completion of an introductory course in programming (Doesn't have to be Python)
 
 ## Required References
