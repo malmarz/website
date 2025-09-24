@@ -177,7 +177,7 @@ There are numerous terms that you need to be aware of to use Git and GitHub effe
 
 ## Collaboration Assignment
 
-1. Start forming teams of 2 students and agree who will be the project manager for the team .
+1. Start forming teams of 3 students and agree who will be the project manager for the team .
 2. Use the following link on github classroom to form your team and setup the assignment: 
    [https://classroom.github.com/a/Ibe_wcC6](https://classroom.github.com/a/Ibe_wcC6)
 3. The assignment is team based, each team member must perform the following tasks using the workflow we explained in class:
