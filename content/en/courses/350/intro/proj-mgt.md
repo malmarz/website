@@ -22,94 +22,237 @@ diagram: True
 
 ---
 
-Project management is about ensuring that the project is completed to specification and within time and resource budget. This involves ensuring each team member knows what they are supposed to do.
+## Introduction to Project Management
 
-We will depart from traditional project management and use a more agile approach. The main difference is that with agile development:
-- Requirements are expected to change, therefore we use different tools to track requirements and focus on priorities.
-- Customers and developer involvement in project management is necessary for success. Developers must have initiative to choose the tasks they work on and participate in updating requirements and report progress on their work. 
+Project management is the process of planning, organizing, and controlling resources to achieve specific goals within defined constraints such as time, budget, and scope. In software development, project management ensures that the project is completed to specification, delivered on time, and stays within budget. This involves coordinating team members, managing requirements, tracking progress, and resolving issues that arise during development.
 
-The project manager's role is also changed slightly:
+Key responsibilities of project management include:
+- Defining project scope and requirements
+- Planning and scheduling tasks
+- Allocating resources and assigning responsibilities
+- Monitoring progress and managing risks
+- Ensuring quality standards are met
+- Facilitating communication between stakeholders
 
-- Might contribute to the project like any other developer would, by working on requirements and suggesting new ones.
-- Ensures that there are enough tasks to keep everyone busy
-- Guide the project by prioritizing tasks, monitoring progress, and resolving problems.
-- We will also give the project manager the responsibility of merging the work of team members into the project. Different teams might choose different workflows.
-- Setting up the project environment where team members can collaborate.
+## Conventional SDLC (Software Development Life Cycle)
 
-### Creating a GitHub Project/Repo
+The conventional SDLC, also known as the Waterfall model, is a sequential approach to software development that follows distinct phases:
 
-There are two main ways in which a project manager can create a project:
+1. **Requirements Analysis:** Gather and document all system requirements upfront
+2. **System Design:** Create detailed architecture and design specifications
+3. **Implementation:** Write code based on the design documents
+4. **Testing:** Verify that the system meets requirements
+5. **Deployment:** Release the software to users
+6. **Maintenance:** Fix bugs and make updates as needed
 
-1. Creating a new empty repository either from GitHub or pushing a new project from Replit.com to GitHub.
-2. Forking an existing project found on GitHub, which would allows the team to build on this existing project.
+Each phase must be completed before moving to the next phase, with formal reviews and sign-offs at each stage.
 
-Once a project is created, it would be a matter of coordinating with team members and assigning tasks and collaborating to ensure the project delivers the system it was intended to build. GitHub offers a number of useful tools to enable project managers to manage projects, which we will discuss in the next section.
+### Advantages of Conventional SDLC
 
-## Project Management Tools
+- **Clear structure and milestones:** Well-defined phases make it easy to understand project progress
+- **Comprehensive documentation:** Detailed documentation at each phase helps with knowledge transfer
+- **Easy to manage:** Sequential nature makes it simple to manage and track
+- **Works well for stable requirements:** Ideal when requirements are well-understood and unlikely to change
+- **Predictable timelines and budgets:** Upfront planning allows for accurate cost and time estimates
 
-Once the project is setup the following tools are available that both the project manager and team members use to coordinate:
+### Disadvantages of Conventional SDLC
 
-### 1. GitHub Issues
+- **Inflexible to changes:** Difficult and costly to go back and make changes once a phase is complete
+- **Late testing:** Problems are discovered late in the development cycle, making them expensive to fix
+- **No working software until late:** Customers don't see working software until near the end of the project
+- **Risk of misunderstanding requirements:** Requirements gathered at the beginning may not reflect actual needs
+- **Not suitable for complex projects:** Long development cycles can lead to outdated solutions by the time of delivery
+- **Limited customer involvement:** Customers are primarily involved only at the beginning and end
 
-A GitHub issue could represent many things in a software project. Whether its a feature that needs to be built, a bug that needs fixing, an idea to be discussed, documentation to be written, or any other task (programming or coordination or other) that the project team needs to complete or discussed can be represented using a GitHub issue. The following figure shows an example project on GitHub called **Ruby on Rails** where hundreds of developers collaborate. You can see how some issues describe problems that need fixing and other are feature requests. Some have discussions associated with them and some are just there waiting for a developer to start working on them:
+## Agile Project Management
 
-{{< figure src="courses/350/issues.png" caption="Example Issue List from Ruby on Rails Project" >}}
+Agile project management is an iterative approach to software development that emphasizes flexibility, collaboration, and continuous improvement. Unlike the conventional SDLC, agile divides the project into small increments called sprints (typically 1-4 weeks), with each sprint producing a potentially shippable product increment.
 
-A good way to start start the issues list is to convert the project requirements into a list of issues on GitHub. But when you do that, you must ensure that each issue describes a very specific task. Team members would look at the issue list and identify a task that they could work on. For example, the project used to translate the current website has the following issue list:
+Key principles of agile development include:
+- **Iterative development:** Build software in small increments rather than all at once
+- **Adaptive planning:** Requirements and plans evolve throughout the project
+- **Customer collaboration:** Continuous involvement of customers and stakeholders
+- **Self-organizing teams:** Team members have autonomy to choose tasks and make decisions
+- **Continuous feedback:** Regular reviews and retrospectives to improve processes
+- **Responding to change:** Welcome changing requirements, even late in development
 
-{{< figure src="courses/350/translate-issues.png" caption="Example Issue List from Ruby on Rails Project" >}}
+The project manager's role in agile is different from traditional approaches:
+- **Facilitator rather than controller:** Helps remove obstacles rather than micromanaging tasks
+- **Prioritizes the backlog:** Ensures the most valuable features are worked on first
+- **Ensures team collaboration:** Facilitates communication between team members and stakeholders
+- **May contribute as a developer:** Can work on tasks like other team members
+- **Monitors progress:** Tracks sprint progress and helps the team stay on track
+- **Sets up collaboration environment:** Provides tools and processes for the team to work effectively
 
-You can see the list is very simple, given that the project is simple. Each issue represent the translation of a single file. This would be a very useful coordination tool between team members, as one member can choose to translate one of the files by assigning the project to themselves. This would let other members know that this task is being worked on one of their team mates and they need to look for another task to complete. Project Managers can also choose to assign the issue to specific members so they would know that the task is their responsibility. The following figure shows how tasks can be assigned:
+### Advantages of Agile Project Management
 
-{{< figure src="courses/350/translate-issues.png" caption="Assigning an Issue to A Team Member or to Yourself" >}}
+- **Flexibility to change:** Requirements can evolve based on feedback and changing business needs
+- **Early and continuous delivery:** Working software is delivered frequently, providing value sooner
+- **Customer satisfaction:** Regular feedback ensures the product meets customer needs
+- **Risk mitigation:** Issues are identified and addressed early in each iteration
+- **Team empowerment:** Developers have ownership and can make decisions
+- **Improved quality:** Continuous testing and integration lead to fewer bugs
+- **Better visibility:** Daily standups and sprint reviews provide transparency
+
+### Disadvantages of Agile Project Management
+
+- **Less predictability:** Difficult to estimate total time and cost upfront
+- **Requires commitment:** Needs active participation from customers and stakeholders
+- **Documentation may suffer:** Focus on working software can lead to inadequate documentation
+- **Challenging for distributed teams:** Requires strong communication, which can be difficult remotely
+- **Scope creep risk:** Flexibility can lead to continuously expanding requirements
+- **Requires experienced team members:** Self-organization requires mature, skilled developers
+- **Not suitable for all projects:** Fixed-price, fixed-scope contracts may not work well with agile
+
+## Using GitHub Projects for Agile Management
+
+GitHub Projects provides a powerful way to implement agile project management using Kanban boards. A Kanban board visualizes work and helps teams manage the flow of tasks from start to completion.
+
+### Creating a GitHub Project
+
+There are two main ways to create a project:
+
+1. **Creating a new repository:** Start from scratch either on GitHub or by pushing from your local environment
+2. **Forking an existing project:** Build upon an existing codebase found on GitHub
+
+Once your repository is set up, you can create a GitHub Project board to manage your work.
+
+### Setting Up a Kanban Board
+
+GitHub Projects uses a Kanban-style board with customizable columns. A typical agile board includes:
+
+1. **To Do (Backlog):** Tasks that need to be completed, ordered by priority
+2. **Ready:** Tasks that are ready to be worked on next (Optional)
+3. **In Progress:** Tasks currently being worked on
+4. **In Review:** Tasks that are completed and have a pull request created. These are awaiting review or testing (Optional)
+5. **Done:** Completed tasks ready for review or deployment
+
+To create a new project board:
+1. Navigate to the "Projects" tab in your repository
+2. Click "New Project"
+3. Choose "Kanban" as the template
+4. Name your project and add a description if desired
+
+{{< figure src="courses/350/project-create.png" caption="GitHub Projects Kanban Board" >}}
+
+
+Each ticket can represent:
+- A new feature to be built
+- A bug that needs fixing
+- An idea to be discussed
+- Documentation to be written
+- Any other task that needs completion
+
+{{< figure src="courses/350/project-board.png" caption="GitHub Projects Kanban Board" >}}
+
+#### Creating Effective Issues
+
+When creating issues, ensure each one:
+- Describes a specific, actionable task
+- Is small enough to be completed in a reasonable timeframe
+- Includes clear acceptance criteria
+- Is written as a user story when appropriate (e.g., "As a user, I want to... so that...")
 
 {{% callout note %}}
-Make sure that you always assign your self a task before you start work on a task. If the task is not in the list, then create it. This would allows your team members to know what you are working on.
+The best method to write useful task descriptions is to write issues as **user stories**. User stories describe functionality from the user's perspective and include what the user does and why. For more information, see this [blog post on writing user stories](https://medium.com/innovation-machine/how-and-why-to-write-great-user-stories-f5a110668246).
 {{% /callout %}}
 
-The issues list is a dynamic list. It should be changing on a daily/weekly bases if the project is active. It since the issues represent requirements, it also reflects how the requirements are constantly changing as the issue list is updated.
+#### Who Creates Issues?
 
-#### Who Writes The Issues?
-
-The responsibility of writing the issues is shared between the project manager, the developers, and even the users of the project. If a member has a new idea that they need to be written, or if they discover a bug that needs fixing, then they capture this by creating an issue and describing the idea or problem. The project manager needs to ensure that there are enough issues in the issue list for the team members to find work to complete, the project manager is also responsible for prioritizing the work. But priority of issues is not shown here, it is shown in the project board which we will explain next.
+The responsibility of creating issues is shared:
+- **Project Manager:** Ensures there are enough issues to keep the team busy and captures key requirements
+- **Developers:** Create issues when they discover bugs or have ideas for improvements
+- **Users/Customers:** Can submit feature requests or bug reports
 
 {{% callout note %}}
-Whether you are the project manager or a member in the team, you can create issues to capture ideas bugs and tasks you want the team to work on. 
+Whether you are the project manager or a team member, you can create issues to capture ideas, bugs, and tasks for the team to work on.
 {{% /callout %}}
 
-### 2. Project Board
+### Working with the Kanban Board
 
-The project board gives a visual overview of how the project is progressing. The project tasks (known as issues on GitHub) are shown as tickets. Therefore, we will use the terms **issue, task, and ticket** interchangeably. The tickets are organized in three different columns as follows:
+#### 1. Prioritizing Work (To Do Column)
 
-1. **To do:** Newly created tickets are placed here which no one is working on. This includes bugs and new features that developers might want to incorporate in the project. Tickets placed at the top of the column have higher priority, and it is the responsibility of the project manager to organize these tickets by priority in this column. Developers are encouraged to pick tickets to work on from the top of the **to do** column.
-
-{{< figure src="courses/350/project-board.png" caption="Project Board Showing the Columns and Tickets" >}}
-
-2. **In Progress:** Tickets claimed by members to work on must be moved here by the member working on them, so that the project manager will know what is being worked on. The following clip shows you how to claim a ticket for your self to work on:
-
-![](/gifs/claim-ticket.gif)
+The project manager organizes tasks in the **Ready** column by priority, with the highest priority items at the top. Team members should select tasks from the top of this column to ensure the most important work gets done first.
 
 
-3. **Done:** Completed tickets are moved here, where project manager will know that there is a pull request that needs to be merged. Once the pull request is merged the ticket is archived. Simply drag the ticket you completed from **In Progress** column to **Done** column and do not forget to create a pull request.
+#### 2. Claiming and Working on Tasks (In Progress Column)
 
+When a team member starts working on a task, they should:
+1. Assign the issue to themselves
+2. Move the issue to the **In Progress** column
+3. Create a branch to work on the task
+
+![Claiming a task and moving it to In Progress](/gifs/claim-ticket.gif)
 
 {{% callout note %}}
-The project manager should order tickets in the To To list by priority from top to bottom. Team members are encouraged to select tickets to work on from the top of the To Do List.
+Always assign yourself to a task before starting work. This lets your team members know what you're working on and prevents duplicate effort.
 {{% /callout %}}
 
-Provided team members move the tickets correctly from one column to another, the project manager will easily get a general idea of who is working on which task. A ticket remaining for a very long would signal that there is a problem with that task or the member working on it. This will require the intervention of the project manager.
+#### 3. Completing Tasks (Done Column)
 
-**Weekly or Bi-Weekly coordination meetings:** It would be very helpful of a team would meet on a weekly or bi-weekly bases where the project board is shown and priority of To Do tickets are discussed and any challenges facing the project. Members could also work together towards finding common solutions or suggest new tickets to include in the to do list..
+When a task is completed:
+1. Create a pull request with your changes
+2. Move the issue to the **In Review** column
+3. Request review from team members or the project manager
+4. Once merged, the issue can be closed and moved to the **Done** column
 
-## Tips on Writing Issues/Tickets
 
-The best method to write useful task descriptions is to write issues/tickets as **user stories**. User stories describe the functionality of a system and the tasks to work on from the perspective of the user. It details what the user does and why. A single user story should describe a single functionality. If the functionality is complex, then you can break it down into smaller user stories.
+### Monitoring Progress
 
-The following [blog post on how to write user stories](https://medium.com/innovation-machine/how-and-why-to-write-great-user-stories-f5a110668246) is an excellent start for anyone looking to improve how they write tickets for a software project.
+The Kanban board provides a visual overview of project progress:
+- **Backlog column:** Shows the remaining work and priorities
+- **Ready column:** Shows tasks ready to be picked up next
+- **In Progress column:** Shows who is working on what
+- **In Review column:** Shows tasks that are completed and awaiting review
+- **Done column:** Shows completed work that is ready to be deployed
 
+If a task remains in **In Progress** for too long, it signals a potential problem that may require the project manager's intervention.
+
+### Collaboration Practices
+
+**Sprint Planning:** Meet at the beginning of each sprint to:
+- Review and prioritize the backlog
+- Estimate tasks
+- Commit to what can be completed in the sprint
+
+**Daily Standups:** Brief daily meetings where team members share:
+- What they completed yesterday
+- What they're working on today
+- Any blockers they're facing
+
+**Sprint Reviews:** At the end of each sprint:
+- Demo completed features
+- Gather feedback from stakeholders
+- Update the backlog based on feedback
+
+**Retrospectives:** Team reflects on:
+- What went well
+- What could be improved
+- Action items for the next sprint
+
+{{% callout note %}}
+Regular coordination meetings (weekly or bi-weekly) help teams stay aligned. Use these meetings to review the project board, discuss priorities, address challenges, and collaborate on solutions.
+{{% /callout %}}
 
 ## Review Questions
 
-- How would you use tickets in your development project?
-- What is the role of a project manager?
-- What role do team members, other than the project manager, play in project management?
+1. What is project management and what are its key responsibilities in software development?
+2. Describe the phases of the conventional SDLC (Waterfall model).
+3. What are the main advantages of using a conventional SDLC approach?
+4. What are the main disadvantages of the conventional SDLC?
+5. How does agile project management differ from conventional SDLC?
+6. What are the key principles of agile development?
+7. What are the advantages of using agile project management?
+8. What are the challenges or disadvantages of agile approaches?
+9. How does the project manager's role differ in agile versus traditional project management?
+10. What is a Kanban board and how is it used in GitHub Projects?
+11. List the five columns in a GitHub Projects Kanban board and explain what each represents. Which columns are optional?
+12. What can a GitHub Issue represent in a software project?
+13. Who is responsible for creating issues in an agile project?
+14. Why is it important to assign yourself to a task before starting work on it?
+15. How should tasks be prioritized and in which column should this prioritization occur?
+16. Describe the workflow of a task from creation to completion, including all the columns it moves through.
+17. What should you do when you complete a task and are ready for it to be reviewed?
+18. What are user stories and why are they useful for writing issues?
+19. What are the key collaboration practices in agile (sprint planning, standups, sprint reviews, retrospectives)?
+20. What does it signal if a task remains in "In Progress" for too long?
