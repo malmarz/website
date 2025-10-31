@@ -19,7 +19,7 @@ draft: False
 ---
 
 {{% callout note %}}
-Due Date is <strong>Thursday March 20th 3pm</strong>
+Due Date is <strong>Monday Nov 10th 8am</strong>
 {{% /callout %}}
 
 You are expected to work as a team on this project. Be sure to follow the workflow that we have explained in class/lab, including the pull request. Part of your assisment will be based on how well you work as a team and use the tools provided by GitHub to collaborate. It will be the responsibility of the project manager to ensure that the team is working together and that the work is distributed fairly.
@@ -87,7 +87,7 @@ erDiagram
 
 ## How to Start and Submit Your Project
 
-1. Join the [poll-project assignment on github classroom](https://classroom.github.com/a/NSd26UjQ).
+1. Join the [poll-project assignment on github classroom](https://classroom.github.com/a/WKTq9ELG).
 2. Clone your assignment project using GitHub desktop to your computer and remember to NOT work on the main/master branch except when setting up the project by the project manager. 
 3. All tasks must be performed in their own branch and merged to master using a pull request. 
 4. When done, commit then push your work using GitHub Desktop. Remember, you can continue to make changes and push code after submission until the deadline.
