@@ -6,7 +6,7 @@ title: The Poll Project 2nd Assignment
 linktitle: Part 2
 
 # Date page published
-date: 2021-05-26T16:24:05Z
+date: 2025-11-11T16:24:05Z
 
 # Academic page type (do not modify).
 type: book
@@ -19,7 +19,7 @@ draft: false
 ---
 
 {{% callout note %}}
-The due date for this assignment is <strong>Wednesday, April 9th, 11:59pm</strong>.
+The due date for this assignment is <strong>Monday, Nov 24th, 8:00am</strong>.
 {{% /callout %}}
 
 ## Assignment Requirements
@@ -51,7 +51,7 @@ These tasks require additional research using the Django documentation. Complete
 
 ## How to Start and Submit Your Project
 
-1. Join the [poll-project part 2 assignment on GitHub Classroom](https://classroom.github.com/a/YV0sEa1T).
+1. Join the [poll-project part 2 assignment on GitHub Classroom](https://classroom.github.com/a/43-BNfGZ).
 2. Clone your assignment project using GitHub Desktop and work on the main/master branch.
 3. When finished, commit and push your work using GitHub Desktop. You can continue to make changes and push updates after submission.
 
