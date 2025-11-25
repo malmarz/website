@@ -19,7 +19,7 @@ draft: false
 ---
 
 {{% callout note %}}
-Due Date is <strong>Wed December 3rd aam</strong>
+Due Date is <strong>Wed December 3rd 8am</strong>
 {{% /callout %}}
 
 ## Requirements for This Assignments 
